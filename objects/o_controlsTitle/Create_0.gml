@@ -1,4 +1,3 @@
-
 // Controls title
 controlsTitle = "Controls"
 
