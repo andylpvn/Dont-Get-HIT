@@ -2,8 +2,10 @@
   "resources": [
     {"id":{"name":"s_cursor","path":"sprites/s_cursor/s_cursor.yy",},"order":1,},
     {"id":{"name":"s_background","path":"sprites/s_background/s_background.yy",},"order":3,},
+    {"id":{"name":"snd_menuBackground","path":"sounds/snd_menuBackground/snd_menuBackground.yy",},"order":0,},
     {"id":{"name":"fnt_monogram","path":"fonts/fnt_monogram/fnt_monogram.yy",},"order":1,},
     {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},"order":1,},
+    {"id":{"name":"snd_menuClick","path":"sounds/snd_menuClick/snd_menuClick.yy",},"order":1,},
     {"id":{"name":"r_game","path":"rooms/r_game/r_game.yy",},"order":1,},
   ],
   "Options": [

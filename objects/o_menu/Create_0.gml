@@ -1,4 +1,8 @@
-   // Menu element names. This will be what is actually drawn
+//create sound for menu click
+
+
+
+// Menu element names. This will be what is actually drawn
 menu[0] = "Play";
 menu[1] = "Options";
 menu[2] = "How to play";
@@ -47,10 +51,23 @@ titleSize = 3;
 
 
 // Button to move up the menu
-upButt = vk_up;
-//upButt = gp_padu; //not sure if it will work with the gamepad > need to be tested
+//upKey = keyboard_check(vk_up) || (gamepad_axis_value(0, gp_axislv) < 0) || gamepad_button_check(0, gp_padu);
+//upKeyPress = (keyboard_check_pressed(vk_up)) || (gamepad_button_check_pressed(0, gp_padu)) ;
+
+upKey = vk_up ;
+//upButt_gamePad = gp_padu;
+
 // Button to move down the menu
-downButt = vk_down;  
+//downKey = keyboard_check(vk_down) || (gamepad_axis_value(0, gp_axislv) > 0) || gamepad_button_check(0, gp_padd);
+//downKeyPress = (keyboard_check_pressed(vk_down)) || (gamepad_button_check_pressed(0, gp_padd));
+
+downKey = vk_down;
+//downButt_gamePad = gp_padd;
 
 // Button to confirm menu choice
-confirmButt = vk_space;
+//confirmKey = keyboard_check(vk_space) || gamepad_button_check(0, gp_face1);
+//confirmKeyPress = (keyboard_check_pressed(vk_space)) || (gamepad_button_check_pressed(0, gp_face1));
+confirmKey = vk_space; 
+//confirmButt_gamePad = gp_face1;
+
+
