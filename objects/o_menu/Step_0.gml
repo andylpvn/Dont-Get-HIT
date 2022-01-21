@@ -48,7 +48,7 @@ if(keyboard_check_pressed(confirmKey))
 	{
 		game_end();
 	}
-} 
+}
 
 
 	if(keyboard_check_pressed(upKey) || keyboard_check_pressed(downKey))
