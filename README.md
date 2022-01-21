@@ -1,2 +1,2 @@
 # Dont Get HIT
- a game project for comp214
+ a game project for SaskPolytech's project
