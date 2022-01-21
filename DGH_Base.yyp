@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"optionRoom","path":"rooms/optionRoom/optionRoom.yy",},"order":2,},
+    {"id":{"name":"howToPlay","path":"rooms/howToPlay/howToPlay.yy",},"order":3,},
     {"id":{"name":"s_cursor","path":"sprites/s_cursor/s_cursor.yy",},"order":1,},
     {"id":{"name":"s_background","path":"sprites/s_background/s_background.yy",},"order":3,},
     {"id":{"name":"fnt_monogram","path":"fonts/fnt_monogram/fnt_monogram.yy",},"order":1,},
@@ -29,6 +30,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"r_game","path":"rooms/r_game/r_game.yy",},},
     {"roomId":{"name":"optionRoom","path":"rooms/optionRoom/optionRoom.yy",},},
+    {"roomId":{"name":"howToPlay","path":"rooms/howToPlay/howToPlay.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
