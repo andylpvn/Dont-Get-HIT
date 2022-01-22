@@ -32,21 +32,25 @@ if(keyboard_check_pressed(confirmKey))
 	{
 		//room_goto_next();
 		// Whatever happens when you play
+		audio_play_sound(snd_menuConfirm, 1000, false);
 	}
 	
 	if(selected == 1) // Options by default
 	{
 		// Go to options room (choose characters, map)
+		audio_play_sound(snd_menuConfirm, 1000, false);
 	}
 	
 	if(selected == 2) 
 	{
 		// Go to HowToPlay room
+		audio_play_sound(snd_menuConfirm, 1000, false);
 	} 
 	
 	if(selected == 3) // Exit by default
 	{
 		game_end();
+		audio_play_sound(snd_menuConfirm, 1000, false);
 	}
 }
 
