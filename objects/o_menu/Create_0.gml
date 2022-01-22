@@ -1,5 +1,5 @@
-//create sound for menu click
-
+ //create sound for menu click
+audio_play_sound(snd_menuBackground, 100, true);
 
 
 // Menu element names. This will be what is actually drawn
