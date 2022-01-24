@@ -33,18 +33,28 @@ if(keyboard_check_pressed(confirmKey))
 		//room_goto_next();
 		// Whatever happens when you play
 		audio_play_sound(snd_menuConfirm, 1000, false);
+		
+		// choose character
+		room_goto(r_options_chooseCharacter);
 	}
 	
 	if(selected == 1) // Options by default
 	{
 		// Go to options room (choose characters, map)
 		audio_play_sound(snd_menuConfirm, 1000, false);
+		
+		room_goto(r_option);
 	}
 	
 	if(selected == 2) 
 	{
 		// Go to HowToPlay room
+		
 		audio_play_sound(snd_menuConfirm, 1000, false);
+		
+		room_goto(r_controls);
+		
+		
 	} 
 	
 	if(selected == 3) // Exit by default
