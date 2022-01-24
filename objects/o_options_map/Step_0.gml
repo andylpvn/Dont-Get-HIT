@@ -41,7 +41,7 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 2) //Go back to main menu
 	{
 		// Display the main menu
-		room_goto(r_game);
+		room_goto(r_Menu);
 		
 	}
 	/*

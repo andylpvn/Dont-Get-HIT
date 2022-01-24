@@ -22,7 +22,7 @@
   "creationCodeFile": "${project_dir}/rooms/r_game/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_564483F3","path":"rooms/r_game/r_game.yy",},
+    {"name":"inst_564483F3","path":"rooms/r_Menu/r_Menu.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -50,7 +50,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "r_game",
+  "name": "r_Menu",
   "tags": [],
   "resourceType": "GMRoom",
 }

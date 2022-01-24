@@ -53,8 +53,7 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 1) // Return to main menu
 	{
 		// Display main menu
-		room_goto(r_game);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		room_goto(r_Menu);      
 
 	}
 	/*
@@ -63,11 +62,11 @@ if(keyboard_check_pressed(confirmButt))
 		// Display the sound menu
 		room_goto(r_option_volume);
 		
-	}
+	}       
 	
 	if(selected == 3) // Return to Main menu
 	{
-		room_goto(r_game);
+		room_goto(r_Menu);
 	}
 	*/
 }

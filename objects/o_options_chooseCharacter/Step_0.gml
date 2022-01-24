@@ -75,7 +75,7 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 7) // return to Main menu
 	{
 		// Display Main menu
-		room_goto(r_game);
+		room_goto(r_Menu);
 		//audio_play_sound(snd_menuConfirm, 1000,false);
 
 	}
