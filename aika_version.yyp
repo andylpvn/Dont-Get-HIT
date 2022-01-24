@@ -71,6 +71,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"r_credits","path":"rooms/r_credits/r_credits.yy",},},
     {"roomId":{"name":"r_Menu","path":"rooms/r_Menu/r_Menu.yy",},},
     {"roomId":{"name":"r_option","path":"rooms/r_option/r_option.yy",},},
     {"roomId":{"name":"r_options_chooseCharacter","path":"rooms/r_options_chooseCharacter/r_options_chooseCharacter.yy",},},
@@ -82,7 +83,6 @@
     {"roomId":{"name":"r_options_chooseCharacter_Red","path":"rooms/r_options_chooseCharacter_Red/r_options_chooseCharacter_Red.yy",},},
     {"roomId":{"name":"r_options_chooseCharacter_Green","path":"rooms/r_options_chooseCharacter_Green/r_options_chooseCharacter_Green.yy",},},
     {"roomId":{"name":"r_options_chooseCharacter_Will","path":"rooms/r_options_chooseCharacter_Will/r_options_chooseCharacter_Will.yy",},},
-    {"roomId":{"name":"r_credits","path":"rooms/r_credits/r_credits.yy",},},
     {"roomId":{"name":"r_controls","path":"rooms/r_controls/r_controls.yy",},},
   ],
   "Folders": [
