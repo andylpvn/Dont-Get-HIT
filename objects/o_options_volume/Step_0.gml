@@ -30,15 +30,15 @@ selected = clamp(selected, 0, array_length_1d(menu) - 1);
 // it should do depending on what menu element is selected
 if(keyboard_check_pressed(confirmButt))
 {
-	if(selected == 0) // Choose character
+	if(selected == 0) 
 	{
-		// Display character menu
+	
 		
 	}
 	
-	if(selected == 1) // Map
+	if(selected == 1)
 	{
-		// Display map option
+		
 
 
 	}

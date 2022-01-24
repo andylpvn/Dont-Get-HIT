@@ -26,20 +26,26 @@ if(keyboard_check_pressed(confirmButt))
 		// choose character
 		room_goto(r_options_chooseCharacter);
 		
+		audio_play_sound(snd_menuConfirm, 1000,false);
+		
 	}
 	
 	if(selected == 1) // Options by default
 	{
+		audio_play_sound(snd_menuConfirm, 1000,false);
 		room_goto(r_option);
+		room_goto_next();
 	}
 	
 	if(selected == 2) 
 	{
 		// Go to HowToPlay room
+		audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	
 	if(selected == 3) // Exit by default
 	{
+		audio_play_sound(snd_menuClick, 1000,false);
 		game_end();
 	}
 }

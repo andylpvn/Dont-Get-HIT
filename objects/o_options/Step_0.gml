@@ -47,12 +47,14 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		// Display volume
 		room_goto(r_option_volume);
+		audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	
 	if(selected == 1) // Return to main menu
 	{
 		// Display main menu
 		room_goto(r_game);
+		audio_play_sound(snd_menuConfirm, 1000,false);
 
 	}
 	/*
