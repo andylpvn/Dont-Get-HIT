@@ -1,6 +1,5 @@
 {
   "resources": [
-    {"id":{"name":"test","path":"rooms/test/test.yy",},"order":3,},
     {"id":{"name":"s_cursor","path":"sprites/s_cursor/s_cursor.yy",},"order":1,},
     {"id":{"name":"s_background","path":"sprites/s_background/s_background.yy",},"order":3,},
     {"id":{"name":"snd_menuBackground","path":"sounds/snd_menuBackground/snd_menuBackground.yy",},"order":0,},
@@ -34,7 +33,6 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"r_game","path":"rooms/r_game/r_game.yy",},},
     {"roomId":{"name":"r_controls","path":"rooms/r_controls/r_controls.yy",},},
-    {"roomId":{"name":"test","path":"rooms/test/test.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -60,7 +58,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.7.603",
+    "IDEVersion": "2.3.7.606",
   },
   "resourceVersion": "1.4",
   "name": "DGH_Base",
