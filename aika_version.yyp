@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"s_winterMap","path":"sprites/s_winterMap/s_winterMap.yy",},"order":13,},
+    {"id":{"name":"Timer2","path":"objects/Timer2/Timer2.yy",},"order":16,},
     {"id":{"name":"o_character4","path":"objects/o_character4/o_character4.yy",},"order":3,},
     {"id":{"name":"r_options_chooseCharacter_Will","path":"rooms/r_options_chooseCharacter_Will/r_options_chooseCharacter_Will.yy",},"order":15,},
     {"id":{"name":"s_character4_idle","path":"sprites/s_character4_idle/s_character4_idle.yy",},"order":9,},
