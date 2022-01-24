@@ -1,10 +1,13 @@
- // Menu element names. This will be what is actually drawn
+//create menu sound
+audio_play_sound(snd_menuBackground, 1000, true);
+
+// Menu element names. This will be what is actually drawn
 menu[0] = "Play";
 menu[1] = "Options";
 menu[2] = "How to play";
 menu[3] = "Exit";
-
-
+    
+ 
 // cursorLevitate will be used to keep a variable that
 // oscillates and moves the cursor back and forth
 cursorLevitate = 0;
