@@ -34,7 +34,7 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		audio_play_sound(snd_menuConfirm, 1000,false);
 		room_goto(r_option);
-		room_goto_next();
+
 	}
 	
 	if(selected == 2) 
