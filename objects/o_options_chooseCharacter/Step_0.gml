@@ -1,4 +1,4 @@
-/// @description Insert description here
+ /// @description Insert description here
 // You can write your code in this editor
 
 
@@ -31,7 +31,7 @@ if(keyboard_check_pressed(confirmButt))
 		//go to pick character for player 2
 		
 		room_goto(r_options_chooseCharacter_Rod);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
 		
 		
 	}
@@ -39,44 +39,44 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		//go to pick character for player 2
 	    room_goto(r_options_chooseCharacter_Steph);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	if(selected == 2) //pick character
 	{
 		//go to pick character for player 2
 		room_goto(r_options_chooseCharacter_Roger);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	if(selected == 3)//pick character
 	{
 		//go to pick character for player 2
 		room_goto(r_options_chooseCharacter_Red);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	if(selected == 4)//pick character
 	{
 		//go to pick character for player 2
 		room_goto(r_options_chooseCharacter_Will);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	if(selected == 5) //pick character
 	{
 		//go to pick character for player 2
 		room_goto(r_options_chooseCharacter_Green);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	if(selected == 6) // got to map room
 	{
 		// choose map
 		room_goto(r_options_map);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	
 	if(selected == 7) // return to Main menu
 	{
 		// Display Main menu
 		room_goto(r_game);
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
 
 	}
 	

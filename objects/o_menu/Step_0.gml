@@ -1,4 +1,4 @@
-// Oscillate the cursor using sin function
+ // Oscillate the cursor using sin function
 cursorLevitate = dsin(cursorTime);
 
 // Use this as an "angle" to use in the sin function
@@ -24,7 +24,7 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 0) // Play by default
 	{
 		// choose character
-		//audio_play_sound(snd_menuConfirm, 1000,false);
+		audio_play_sound(snd_menuConfirm, 1000,false);
 		room_goto(r_options_chooseCharacter);
 		
 		
@@ -33,7 +33,7 @@ if(keyboard_check_pressed(confirmButt))
 	
 	if(selected == 1) // Options by default
 	{
-		//audio_play_sound(snd_menuConfirm, 1000,false);
+		audio_play_sound(snd_menuConfirm, 1000,false);
 		room_goto(r_option);
 
 	}
@@ -41,7 +41,7 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 2) 
 	{
 		// Go to HowToPlay room
-		//audio_play_sound(snd_menuConfirm, 1000,false);
+		audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	
 	if(selected == 3) // Exit by default
@@ -49,4 +49,9 @@ if(keyboard_check_pressed(confirmButt))
 		// audio_play_sound(snd_menuConfirm, 1000,false);
 		game_end();
 	}
+}
+
+if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
+{
+	audio_play_sound(snd_menuNavigate, 1000, false);
 }
