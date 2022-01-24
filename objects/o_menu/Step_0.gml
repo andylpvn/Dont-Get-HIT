@@ -24,9 +24,10 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 0) // Play by default
 	{
 		// choose character
+		audio_play_sound(snd_menuConfirm, 1000,false);
 		room_goto(r_options_chooseCharacter);
 		
-		audio_play_sound(snd_menuConfirm, 1000,false);
+		
 		
 	}
 	
@@ -45,7 +46,7 @@ if(keyboard_check_pressed(confirmButt))
 	
 	if(selected == 3) // Exit by default
 	{
-		audio_play_sound(snd_menuClick, 1000,false);
+		audio_play_sound(snd_menuConfirm, 1000,false);
 		game_end();
 	}
 }
