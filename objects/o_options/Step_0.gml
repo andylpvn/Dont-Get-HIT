@@ -1,3 +1,25 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+/*
+//------CHOOSE CHARACTER------
+if ( selected == 0 ) 
+{
+	//Open character menu
+}
+
+//------MAP------
+else if ( selected == 1 ) 
+{
+	//Open map menu
+}
+
+//------VOLUME------
+else if (selected == 2 ) 
+{
+	//open volume
+}
+*/
 // Oscillate the cursor using sin function
 cursorLevitate = dsin(cursorTime);
 
@@ -21,25 +43,29 @@ selected = clamp(selected, 0, array_length_1d(menu) - 1);
 // it should do depending on what menu element is selected
 if(keyboard_check_pressed(confirmButt))
 {
-	if(selected == 0) // Play by default
+	if(selected == 0) // Go to volume
 	{
-		// choose character
-		room_goto(r_options_chooseCharacter);
+		// Display volume
+		room_goto(r_option_volume);
+	}
+	
+	if(selected == 1) // Return to main menu
+	{
+		// Display main menu
+		room_goto(r_game);
+
+	}
+	/*
+	if(selected == 2) // Sounds
+	{
+		// Display the sound menu
+		room_goto(r_option_volume);
 		
 	}
 	
-	if(selected == 1) // Options by default
+	if(selected == 3) // Return to Main menu
 	{
-		room_goto(r_option);
+		room_goto(r_game);
 	}
-	
-	if(selected == 2) 
-	{
-		// Go to HowToPlay room
-	}
-	
-	if(selected == 3) // Exit by default
-	{
-		game_end();
-	}
+	*/
 }

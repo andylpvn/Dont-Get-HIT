@@ -1,8 +1,13 @@
- // Menu element names. This will be what is actually drawn
-menu[0] = "Play";
-menu[1] = "Options";
-menu[2] = "How to play";
-menu[3] = "Exit";
+draw_sprite(s_character1_idle_picture, 0, 150, 90); // Menu element names. This will be what is actually drawn
+menu[0] = "Rod";
+menu[1] = "Steph"; 
+menu[2] = "Roger";
+menu[3] = "Red";
+menu[4] = "Will";
+menu[5] = "Green";
+menu[6] = "Next";
+menu[7] = "Back";
+
 
 
 // cursorLevitate will be used to keep a variable that
@@ -30,20 +35,20 @@ spacing =26;
 
 
 // Color of the menu element when selected
-selectedCol = c_gray;
+selectedCol = c_white;
 
 // Color of the menu element when not selected
-notSelectedCol = c_black;
+notSelectedCol = c_silver;
 
 // Game title color
 titleCol = c_white;
 
 
 // Title of your game
-gameTitle = "Don't Get HIT";
+gameTitle = "Choose Character";
 
 // Size of the title 
-titleSize = 3;
+titleSize = 1.5;
 
 
 // Button to move up the menu

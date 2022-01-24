@@ -1,6 +1,15 @@
 // Set default font
 draw_set_font(fnt_monogram);
 
+
+//Draw character
+ draw_sprite(s_character1_idle_picture, 0, 150, 90);
+ draw_sprite(s_character2_idle_picture, 0, 150, 115);
+ draw_sprite(s_character3_idle_picture, 0, 150, 145);
+ draw_sprite(s_character4_idle_picture, 0, 150, 168);
+ draw_sprite(s_character5_idle_picture, 0, 150, 194);
+ draw_sprite(s_character6_idle_picture, 0, 150, 225);
+
 // Loop through the array containing each menu element
 for(i = 0; i < array_length_1d(menu); i++)
 {
@@ -17,7 +26,7 @@ for(i = 0; i < array_length_1d(menu); i++)
 	}
 	
 	// Draw the text
-	draw_text(x,y+i*spacing, menu[i]);	
+	draw_text(x,y + i*spacing, menu[i]);	
 }
 // Getting width of cursor to separate it a bit from the menu
 var cursorWidth = sprite_get_width(s_cursor);
@@ -28,4 +37,4 @@ var cursorWidth = sprite_get_width(s_cursor);
 
 // Draw game title (at 10% of screen width and height, hence 0.1)
 draw_set_color(titleCol);
-draw_text_transformed(room_width*0.15, room_height*0.1 , gameTitle, titleSize, titleSize,0);
+draw_text_transformed(room_width*0.31, room_height*0.20 , gameTitle, titleSize, titleSize,0);

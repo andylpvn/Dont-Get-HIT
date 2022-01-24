@@ -1,4 +1,13 @@
-// Oscillate the cursor using sin function
+/// @description Insert description here
+// You can write your code in this editor
+
+
+
+
+
+//Display volume menu
+
+
 cursorLevitate = dsin(cursorTime);
 
 // Use this as an "angle" to use in the sin function
@@ -21,25 +30,29 @@ selected = clamp(selected, 0, array_length_1d(menu) - 1);
 // it should do depending on what menu element is selected
 if(keyboard_check_pressed(confirmButt))
 {
-	if(selected == 0) // Play by default
+	if(selected == 0) // Choose character
 	{
-		// choose character
-		room_goto(r_options_chooseCharacter);
+		// Display character menu
 		
 	}
 	
-	if(selected == 1) // Options by default
+	if(selected == 1) // Map
 	{
+		// Display map option
+
+
+	}
+	
+	if(selected == 2) // Sounds
+	{
+		// Display the sound menu
 		room_goto(r_option);
+		
 	}
-	
-	if(selected == 2) 
+	/*
+	if(selected == 3) // Return to Main menu
 	{
-		// Go to HowToPlay room
+		room_goto_previous();
 	}
-	
-	if(selected == 3) // Exit by default
-	{
-		game_end();
-	}
+	*/
 }

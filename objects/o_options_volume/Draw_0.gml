@@ -28,4 +28,4 @@ var cursorWidth = sprite_get_width(s_cursor);
 
 // Draw game title (at 10% of screen width and height, hence 0.1)
 draw_set_color(titleCol);
-draw_text_transformed(room_width*0.15, room_height*0.1 , gameTitle, titleSize, titleSize,0);
+draw_text_transformed(room_width*0.35, room_height*0.15 , gameTitle, titleSize, titleSize,0);

@@ -1,6 +1,11 @@
 // Set default font
 draw_set_font(fnt_monogram);
 
+
+//Draw map
+ draw_sprite_stretched(s_summerMap, -1, 167, 125, .135, .135);
+ draw_sprite_stretched(s_winterMap, -1, 275, 125, .135, .135);
+
 // Loop through the array containing each menu element
 for(i = 0; i < array_length_1d(menu); i++)
 {
@@ -26,6 +31,7 @@ var cursorWidth = sprite_get_width(s_cursor);
 // to the left of the menu      
  draw_sprite(s_cursor, -1, x + cursorLevitate - cursorWidth/2, y + selectLerp*spacing);
 
+ 
 // Draw game title (at 10% of screen width and height, hence 0.1)
 draw_set_color(titleCol);
-draw_text_transformed(room_width*0.15, room_height*0.1 , gameTitle, titleSize, titleSize,0);
+draw_text_transformed(room_width*0.31, room_height*0.20 , gameTitle, titleSize, titleSize,0);
