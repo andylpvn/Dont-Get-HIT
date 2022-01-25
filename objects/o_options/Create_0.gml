@@ -1,8 +1,8 @@
  // Menu element names. This will be what is actually drawn
-menu[0] = "Sounds";
-menu[1] = "Back";/*
-menu[2] = "Sounds";
-menu[3] = "Back";*/
+menu[0] = "mute sound"
+menu[1] = "unmute sound"
+menu[2] = "Back to Main Menu"
+/*menu[3] = "Back";*/
 
 
 // cursorLevitate will be used to keep a variable that

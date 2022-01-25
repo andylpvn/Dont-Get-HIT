@@ -46,24 +46,27 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 0) // Go to volume
 	{
 		// Display volume
-		room_goto(r_option_volume);
 		audio_play_sound(snd_menuConfirm, 1000,false);
+		      audio_stop_sound(snd_menuConfirm);
+			  audio_stop_sound(snd_menuBackground);
+			  audio_stop_sound(snd_menuNavigate);
 	}
 	
 	if(selected == 1) // Return to main menu
 	{
-		// Display main menu
-		room_goto(r_Menu);      
+		     audio_play_sound(snd_menuConfirm, 1000,false);
+			 audio_play_sound(snd_menuBackground, 1000,false);
+			 audio_play_sound(snd_menuNavigate, 1000,false);
 
 	}
-	/*
+	
 	if(selected == 2) // Sounds
 	{
 		// Display the sound menu
-		room_goto(r_option_volume);
+		room_goto(r_Menu);
 		
 	}       
-	
+	/*
 	if(selected == 3) // Return to Main menu
 	{
 		room_goto(r_Menu);
