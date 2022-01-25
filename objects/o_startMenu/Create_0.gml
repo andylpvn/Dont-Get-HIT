@@ -1,10 +1,14 @@
- // Menu element names. This will be what is actually drawn
-menu[0] = "mute background music"
-menu[1] = "unmute background sound"
-menu[2] = "Back to Main Menu"
-/*menu[3] = "Back";*/
+//create menu sound
+//audio_play_sound(snd_menuBackground, 1000, true);
 
-
+ 
+// Menu element names. This will be what is actually drawn
+menu[0] = "Play";
+menu[1] = "Options";
+menu[2] = "How to play";     
+menu[3] = "Exit";
+    
+ 
 // cursorLevitate will be used to keep a variable that
 // oscillates and moves the cursor back and forth
 cursorLevitate = 0;
@@ -30,17 +34,17 @@ spacing =26;
 
 
 // Color of the menu element when selected
-selectedCol = c_white;
+selectedCol = c_gray;
 
 // Color of the menu element when not selected
-notSelectedCol = c_silver;
+notSelectedCol = c_black;
 
 // Game title color
 titleCol = c_white;
 
 
 // Title of your game
-gameTitle = "Options";
+gameTitle = "Don't Get HIT";
 
 // Size of the title 
 titleSize = 3;

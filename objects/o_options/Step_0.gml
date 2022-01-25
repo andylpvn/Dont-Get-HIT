@@ -41,27 +41,40 @@ selected = clamp(selected, 0, array_length_1d(menu) - 1);
 
 // Whenever you press the confirm button, do whatever
 // it should do depending on what menu element is selected
+
 if(keyboard_check_pressed(confirmButt))
 {
 	if(selected == 0) // Go to volume
 	{
 		// Display volume
+		
 		audio_play_sound(snd_menuConfirm, 1000,false);
-		      audio_stop_sound(snd_menuConfirm);
-			  audio_stop_sound(snd_menuBackground);
-			  audio_stop_sound(snd_menuNavigate);
+		///button is clicked on, whatever that means in your case.
+
+ audio_pause_sound(snd_menuBackground);
+
+			 
+
 	}
 	
 	if(selected == 1) // Return to main menu
 	{
+	
+
+		audio_resume_sound(snd_menuBackground);
 		     audio_play_sound(snd_menuConfirm, 1000,false);
-			 audio_play_sound(snd_menuBackground, 1000,false);
-			 audio_play_sound(snd_menuNavigate, 1000,false);
+			
+			// audio_play_sound(snd_menuNavigate, 1000,false);
+			 if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
+{
+	audio_play_sound(snd_menuNavigate, 1000, false);
+}
 
 	}
 	
 	if(selected == 2) // Sounds
 	{
+		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// Display the sound menu
 		room_goto(r_Menu);
 		

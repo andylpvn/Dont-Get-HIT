@@ -1,9 +1,5 @@
- /// @description Insert description here
-// You can write your code in this editor
 
-
-//DISPLAY CHARACTER OPTION
-
+// Oscillate the cursor using sin function
 cursorLevitate = dsin(cursorTime);
 
 // Use this as an "angle" to use in the sin function
@@ -20,42 +16,57 @@ selected += vert;
 selectLerp = lerp(selectLerp, selected, lerpAmt); // Smooth cursor movement
 
 // Don't let cursor move past where it should be
-selected = clamp(selected, 0, array_length_1d(menu) - 1);
+selected =  clamp(selected, 0, array_length_1d(menu) - 1);
 
 // Whenever you press the confirm button, do whatever
 // it should do depending on what menu element is selected
+
 if(keyboard_check_pressed(confirmButt))
 {
-	if(selected == 0) //go to game room
+	if(selected == 0) // Play by default
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
-		// Waiting for Tanner to finish the game room
-		room_goto(r_main);
-	}
-	
-	if(selected == 1) // Go back to choose character character
-	{
-		  audio_play_sound(snd_menuConfirm, 1000,false);
-		// Display map option
+		// choose character
+	//	audio_play_sound(snd_menuConfirm, 1000,false);
 		room_goto(r_options_chooseCharacter);
-
-	}
-	
-	if(selected == 2) //Go back to main menu
-	{
-		  audio_play_sound(snd_menuConfirm, 1000,false);
-		// Display the main menu
-		room_goto(r_Menu);
+		
+	 	
 		
 	}
-	/*
-	if(selected == 3) // Return to Main menu
+	
+	if(selected == 1) // Options by default
 	{
-		room_goto_previous();
+		  audio_play_sound(snd_menuConfirm, 1000,false);
+		//audio_play_sound(snd_menuConfirm, 1000,false);
+		room_goto(r_option);
+		
 	}
-	*/
+	
+	if(selected == 2) 
+	{
+		  audio_play_sound(snd_menuConfirm, 1000,false);
+		// Go to HowToPlay room
+		//audio_play_sound(snd_menuConfirm, 1000,false);
+	}
+	
+	if(selected == 3) // Exit by default
+	{
+		  audio_play_sound(snd_menuConfirm, 1000,false);
+		// audio_play_sound(snd_menuConfirm, 1000,false);
+		game_end();
+	}
+			
+
+
 }
-			 if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
+
+
+
+audio_play_sound(snd_menuBackground,1000, true);
+		if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
 {
 	audio_play_sound(snd_menuNavigate, 1000, false);
 }
+
+
+
