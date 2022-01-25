@@ -1,4 +1,4 @@
-draw_sprite(s_character1_idle_picture, 0, 150, 90); // Menu element names. This will be what is actually drawn
+ // Menu element names. This will be what is actually drawn
 menu[0] = "Rod";
 menu[1] = "Steph"; 
 menu[2] = "Roger";
@@ -25,8 +25,8 @@ leviRate = 1.5;
 
 // Holds what menu element is selected. Ex: if selected = 1, 
 // then the selected element is Options.
-selected = 0;
-selectLerp = 0; // Same as previous line but for lerp (smooth movement)
+selected = 2;
+selectLerp = 2; // Same as previous line but for lerp (smooth movement)
 lerpAmt = 0.2; // Higher number -> faster cursor (between 0 and 1)
 
 
