@@ -72,8 +72,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"r_credits","path":"rooms/r_credits/r_credits.yy",},},
     {"roomId":{"name":"r_Menu","path":"rooms/r_Menu/r_Menu.yy",},},
+    {"roomId":{"name":"r_credits","path":"rooms/r_credits/r_credits.yy",},},
     {"roomId":{"name":"r_option","path":"rooms/r_option/r_option.yy",},},
     {"roomId":{"name":"r_options_chooseCharacter","path":"rooms/r_options_chooseCharacter/r_options_chooseCharacter.yy",},},
     {"roomId":{"name":"r_options_map","path":"rooms/r_options_map/r_options_map.yy",},},
@@ -110,7 +110,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.7.606",
+    "IDEVersion": "2.3.7.603",
   },
   "resourceVersion": "1.4",
   "name": "aika_version",
