@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "sub_object_characters1",
+    "path": "folders/Objects/sub_object_characters1.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_options_chooseCharacter",
+  "name": "o_options_chooseCharacter1",
   "tags": [],
   "resourceType": "GMObject",
 }

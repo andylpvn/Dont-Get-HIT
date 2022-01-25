@@ -1,3 +1,5 @@
+ 
+
  // Menu element names. This will be what is actually drawn
 menu[0] = "Rod";
 menu[1] = "Steph"; 
@@ -6,7 +8,6 @@ menu[3] = "Red";
 menu[4] = "Will";
 menu[5] = "Green";
 menu[6] = "Next";
-menu[7] = "Back";
 
 
 
@@ -25,8 +26,8 @@ leviRate = 1.5;
 
 // Holds what menu element is selected. Ex: if selected = 1, 
 // then the selected element is Options.
-selected = 0;
-selectLerp = 0; // Same as previous line but for lerp (smooth movement)
+selected = 1;
+selectLerp = 1; // Same as previous line but for lerp (smooth movement)
 lerpAmt = 0.2; // Higher number -> faster cursor (between 0 and 1)
 
 
@@ -45,10 +46,10 @@ titleCol = c_white;
 
 
 // Title of your game
-gameTitle = "Choose Character";
+gameTitle = "Choose Character (Player 2)";
 
 // Size of the title 
-titleSize = 1.5;
+titleSize = 1;
 
 
 // Button to move up the menu

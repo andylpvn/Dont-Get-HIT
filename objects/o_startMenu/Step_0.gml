@@ -1,3 +1,8 @@
+audio_play_sound(snd_menuBackground,1000, true);
+		if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
+{
+	audio_play_sound(snd_menuNavigate, 1000, false);
+}
 
 // Oscillate the cursor using sin function
 cursorLevitate = dsin(cursorTime);
@@ -62,11 +67,6 @@ if(keyboard_check_pressed(confirmButt))
 
 
 
-audio_play_sound(snd_menuBackground,1000, true);
-		if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
-{
-	audio_play_sound(snd_menuNavigate, 1000, false);
-}
 
 
 

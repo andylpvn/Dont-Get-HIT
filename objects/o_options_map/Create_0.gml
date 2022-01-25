@@ -1,10 +1,10 @@
  // Menu element names. This will be what is actually drawn
-menu[0] = "Start the game";
+menu[0] = "Summer"
+menu[1] = "Winter"
+
+menu[2] = "Start the game";
 
 
-menu[1] = "Back";
-
-menu[2] = "Return to Main Menu";
 /*
 menu[3] = "Back";
 */

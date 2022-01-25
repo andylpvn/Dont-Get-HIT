@@ -27,8 +27,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "sub_object_map",
+    "path": "folders/Objects/sub_object_map.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_options_map",

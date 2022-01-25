@@ -45,10 +45,10 @@ titleCol = c_white;
 
 
 // Title of your game
-gameTitle = "Choose Character";
+gameTitle = "Choose Character (Player 1)";
 
 // Size of the title 
-titleSize = 1.5;
+titleSize = 1;
 
 
 // Button to move up the menu

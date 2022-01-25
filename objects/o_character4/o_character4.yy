@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "sub_object_characters",
-    "path": "folders/Objects/sub_object_characters.yy",
+    "name": "sub_object_characters1",
+    "path": "folders/Objects/sub_object_characters1.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_character4",

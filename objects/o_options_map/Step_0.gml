@@ -30,14 +30,14 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// Waiting for Tanner to finish the game room
-		room_goto(r_main);
+		room_goto(r_options_map_summer);
 	}
 	
 	if(selected == 1) // Go back to choose character character
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// Display map option
-		room_goto(r_options_chooseCharacter);
+		room_goto(r_options_map_winter);
 
 	}
 	
@@ -45,15 +45,11 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// Display the main menu
-		room_goto(r_Menu);
+		room_goto(r_main);
 		
 	}
-	/*
-	if(selected == 3) // Return to Main menu
-	{
-		room_goto_previous();
-	}
-	*/
+	
+
 }
 			 if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
 {
