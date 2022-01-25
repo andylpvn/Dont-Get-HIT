@@ -29,6 +29,7 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 0) //go to game room
 	{
 		// Waiting for Tanner to finish the game room
+		room_goto(r_main);
 	}
 	
 	if(selected == 1) // Go back to choose character character
