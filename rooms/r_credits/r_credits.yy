@@ -24,8 +24,8 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_61722CA1","path":"rooms/r_credits/r_credits.yy",},
     {"name":"inst_2680C4E8","path":"rooms/r_credits/r_credits.yy",},
+    {"name":"inst_61722CA1","path":"rooms/r_credits/r_credits.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
