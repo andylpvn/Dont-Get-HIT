@@ -19,6 +19,7 @@
     {"id":{"name":"o_options_chooseCharacter","path":"objects/o_options_chooseCharacter/o_options_chooseCharacter.yy",},"order":3,},
     {"id":{"name":"r_options_chooseCharacter_Green","path":"rooms/r_options_chooseCharacter_Green/r_options_chooseCharacter_Green.yy",},"order":14,},
     {"id":{"name":"s_character5_idle","path":"sprites/s_character5_idle/s_character5_idle.yy",},"order":10,},
+    {"id":{"name":"o_controlsTitle","path":"objects/o_controlsTitle/o_controlsTitle.yy",},"order":12,},
     {"id":{"name":"s_character2_idle_picture","path":"sprites/s_character2_idle_picture/s_character2_idle_picture.yy",},"order":16,},
     {"id":{"name":"r_controls","path":"rooms/r_controls/r_controls.yy",},"order":17,},
     {"id":{"name":"s_character1_idle","path":"sprites/s_character1_idle/s_character1_idle.yy",},"order":6,},
