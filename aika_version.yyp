@@ -47,6 +47,7 @@
     {"id":{"name":"s_summerMap","path":"sprites/s_summerMap/s_summerMap.yy",},"order":12,},
     {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},"order":1,},
     {"id":{"name":"r_options_chooseCharacter_Steph","path":"rooms/r_options_chooseCharacter_Steph/r_options_chooseCharacter_Steph.yy",},"order":11,},
+    {"id":{"name":"o_creditsText","path":"objects/o_creditsText/o_creditsText.yy",},"order":11,},
     {"id":{"name":"o_character5","path":"objects/o_character5/o_character5.yy",},"order":4,},
     {"id":{"name":"r_option","path":"rooms/r_option/r_option.yy",},"order":6,},
     {"id":{"name":"r_Menu","path":"rooms/r_Menu/r_Menu.yy",},"order":1,},
