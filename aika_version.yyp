@@ -41,6 +41,7 @@
     {"id":{"name":"o_map2","path":"objects/o_map2/o_map2.yy",},"order":2,},
     {"id":{"name":"o_character3","path":"objects/o_character3/o_character3.yy",},"order":2,},
     {"id":{"name":"s_optionbg","path":"sprites/s_optionbg/s_optionbg.yy",},"order":4,},
+    {"id":{"name":"s_controls","path":"sprites/s_controls/s_controls.yy",},"order":21,},
     {"id":{"name":"s_optionFrame","path":"sprites/s_optionFrame/s_optionFrame.yy",},"order":5,},
     {"id":{"name":"snd_menuBackground","path":"sounds/snd_menuBackground/snd_menuBackground.yy",},"order":0,},
     {"id":{"name":"o_character1","path":"objects/o_character1/o_character1.yy",},"order":0,},
@@ -73,9 +74,9 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"r_controls","path":"rooms/r_controls/r_controls.yy",},},
     {"roomId":{"name":"r_Menu","path":"rooms/r_Menu/r_Menu.yy",},},
     {"roomId":{"name":"r_credits","path":"rooms/r_credits/r_credits.yy",},},
-    {"roomId":{"name":"r_controls","path":"rooms/r_controls/r_controls.yy",},},
     {"roomId":{"name":"r_option","path":"rooms/r_option/r_option.yy",},},
     {"roomId":{"name":"r_options_chooseCharacter","path":"rooms/r_options_chooseCharacter/r_options_chooseCharacter.yy",},},
     {"roomId":{"name":"r_options_map","path":"rooms/r_options_map/r_options_map.yy",},},
