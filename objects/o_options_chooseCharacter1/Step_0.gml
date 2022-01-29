@@ -41,6 +41,7 @@ if(keyboard_check_pressed(confirmButt))
 		//go to pick character for player 2
 	    room_goto(r_options_chooseCharacter_Steph);
 		//audio_play_sound(snd_menuConfirm, 1000,false);
+		
 	}
 	if(selected == 2) //pick character
 	{

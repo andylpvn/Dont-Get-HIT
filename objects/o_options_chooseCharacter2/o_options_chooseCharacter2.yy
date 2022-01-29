@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "sub_object_characters2",
-    "path": "folders/Objects/sub_object_characters2.yy",
+    "path": "folders/Objects/players/sub_object_characters2.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_options_chooseCharacter2",

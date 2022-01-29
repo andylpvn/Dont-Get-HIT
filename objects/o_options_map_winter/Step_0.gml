@@ -45,7 +45,7 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// Display the main menu
-		room_goto(r_main);
+		room_goto(r_game);
 		
 	}
 

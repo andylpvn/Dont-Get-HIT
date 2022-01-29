@@ -1,4 +1,4 @@
-audio_play_sound(snd_menuBackground,1000, true);
+audio_play_sound(snd_menuBackground,100, true);
 		if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
 {
 	audio_play_sound(snd_menuNavigate, 1000, false);
