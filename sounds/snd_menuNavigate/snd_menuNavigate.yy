@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_menuBackground.wav",
-  "duration": 61.4244232,
+  "soundFile": "snd_menuNavigate.wav",
+  "duration": 0.02449,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_menuBackground",
+  "name": "snd_menuNavigate",
   "tags": [],
   "resourceType": "GMSound",
 }
