@@ -4,6 +4,7 @@ audio_play_sound(snd_menuBackground,100, true);
 	audio_play_sound(snd_menuNavigate, 1000, false);
 }
 
+
 // Oscillate the cursor using sin function
 cursorLevitate = dsin(cursorTime);
 

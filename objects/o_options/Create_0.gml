@@ -1,6 +1,6 @@
  // Menu element names. This will be what is actually drawn
-menu[0] = "mute background music"
-menu[1] = "unmute background sound"
+menu[0] = "mute sounds"
+menu[1] = "unmute sounds"
 menu[2] = "Back to Main Menu"
 /*menu[3] = "Back";*/
 

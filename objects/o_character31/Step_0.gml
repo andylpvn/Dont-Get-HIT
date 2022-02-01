@@ -28,6 +28,7 @@ if(keyboard_check_pressed(confirmButt))
 {
 	if(selected == 0) //pick character
 	{
+		global.mychar = 20;
 		//go to pick character for player 2
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		room_goto(r_options_chooseCharacter_Rod);
@@ -37,6 +38,7 @@ if(keyboard_check_pressed(confirmButt))
 	}
 	if(selected == 1) //pick character
 	{
+		global.mychar = 21;
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		//go to pick character for player 2
 	    room_goto(r_options_chooseCharacter_Steph2);
@@ -44,6 +46,7 @@ if(keyboard_check_pressed(confirmButt))
 	}
 	if(selected == 2) //pick character
 	{
+		global.mychar = 22;
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		//go to pick character for player 2
 		room_goto(r_options_chooseCharacter_Roger2);
@@ -51,6 +54,7 @@ if(keyboard_check_pressed(confirmButt))
 	}
 	if(selected == 3)//pick character
 	{
+		global.mychar = 23;
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		//go to pick character for player 2
 		room_goto(r_options_chooseCharacter_Red2);
@@ -58,6 +62,7 @@ if(keyboard_check_pressed(confirmButt))
 	}
 	if(selected == 4)//pick character
 	{
+		global.mychar = 24;
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		//go to pick character for player 2
 		room_goto(r_options_chooseCharacter_Will2);
@@ -65,6 +70,7 @@ if(keyboard_check_pressed(confirmButt))
 	}
 	if(selected == 5) //pick character
 	{
+		global.mychar = 25;
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		//go to pick character for player 2
 		room_goto(r_options_chooseCharacter_Green2);

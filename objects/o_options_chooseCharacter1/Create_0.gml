@@ -8,7 +8,7 @@ menu[5] = "Green";
 menu[6] = "Next";
 menu[7] = "Back";
 
-
+global.chosenPlayer1=0;
 
 // cursorLevitate will be used to keep a variable that
 // oscillates and moves the cursor back and forth

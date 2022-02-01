@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_character3_idle",
+    "path": "sprites/s_character3_idle/s_character3_idle.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
