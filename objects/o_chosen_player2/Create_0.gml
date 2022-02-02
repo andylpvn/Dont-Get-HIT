@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+
+
+
 if (global.mychar == 20) 
 {
 	sprite_index = s_character1_idle;
