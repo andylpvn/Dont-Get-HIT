@@ -1,8 +1,5 @@
-		if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
-{
-	audio_play_sound(snd_menuNavigate, 1000, false);
-}
-
+/// @description Insert description here
+// You can write your code in this editor
 
 // Oscillate the cursor using sin function
 cursorLevitate = dsin(cursorTime);
@@ -28,12 +25,11 @@ selected =  clamp(selected, 0, array_length_1d(menu) - 1);
 
 if(keyboard_check_pressed(confirmButt))
 {
-	if(selected == 0) // Play by default
+	if(selected == 0)
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
-		// choose character
-	//	audio_play_sound(snd_menuConfirm, 1000,false);
-		room_goto(r_options_chooseCharacter);
+
+			//how to play room
 		
 	 	
 		
@@ -50,8 +46,7 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 2) 
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
-		// Go to HowToPlay room
-		//audio_play_sound(snd_menuConfirm, 1000,false);
+		room_goto(r_Menu);
 	}
 	
 	if(selected == 3) // Exit by default
@@ -64,9 +59,7 @@ if(keyboard_check_pressed(confirmButt))
 
 
 }
-
-
-
-
-
-
+if(keyboard_check_pressed(upButt) || keyboard_check_pressed(downButt) )
+{
+	audio_play_sound(snd_menuNavigate, 1000, false);
+}

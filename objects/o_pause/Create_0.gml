@@ -1,16 +1,15 @@
-//create menu sound
-audio_play_sound(snd_menuBackground,100, true);
-
-//audio_play_sound(snd_menuBackground, 1000, true);
+/// @description Insert description here
+// You can write your code in this editor
+pause = false;
 
  
 // Menu element names. This will be what is actually drawn
-menu[0] = "Play";
+menu[0] = "How to play";
 menu[1] = "Options";
-menu[2] = "How to play";     
-menu[3] = "Exit";
+menu[2] = "Return to Main Menu";     
+menu[3] = "Quit Game";
     
- 
+
 // cursorLevitate will be used to keep a variable that
 // oscillates and moves the cursor back and forth
 cursorLevitate = 0;
@@ -46,12 +45,11 @@ titleCol = c_white;
 
 
 // Title of your game
-gameTitle = "Don't Get HIT";
+gameTitle = "Paused";
 
 // Size of the title 
 titleSize = 3;
-
-
+fontSize = 2;
 // Button to move up the menu
 upButt = vk_up;
 
