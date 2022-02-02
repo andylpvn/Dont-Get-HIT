@@ -3,7 +3,7 @@
 
  
 // Menu element names. This will be what is actually drawn
-menu[0] = "Controls";
+controlsTitle[0] = "Controls";
 
 // Color of the menu element when selected
 selectedCol = c_gray;

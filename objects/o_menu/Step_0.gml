@@ -44,8 +44,8 @@ if(keyboard_check_pressed(confirmButt))
 	
 	if(selected == 2) 
 	{
-		  audio_play_sound(snd_menuConfirm, 1000,false);
-		// Go to HowToPlay room
+		audio_play_sound(snd_menuConfirm, 1000,false);
+		room_goto(r_controls);
 		//audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	
