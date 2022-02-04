@@ -4,6 +4,7 @@
 //movement limitation
 x = clamp(x, 55, 1310);
 
+
 if (global.mychar == 20) 
 {
 	//default position once the game starts
@@ -40,7 +41,10 @@ if (global.mychar == 20)
 		{
 			x-=5;
 		}
-		
+		else 
+		{
+			x-=1;
+		}
 			sprite_index = s_character1_walk_leftside;
 	
 		}

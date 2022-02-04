@@ -31,7 +31,10 @@ if (global.chosenPlayer1 == 0)
 		{
 			x+=5;
 		}
-
+		else 
+		{
+			x-=1;
+		}
 			sprite_index = s_character1_walk;
 			
 		}
