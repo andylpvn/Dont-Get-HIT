@@ -4,10 +4,7 @@
 
 //movement limitation
 x = clamp(x, 50, 1315);
-if (place_meeting(x, y, o_chosen_player2))
-{
-	move_bounce_solid(true);
-}
+
 //-----player if statement
 if (global.chosenPlayer1 == 0) 
 {

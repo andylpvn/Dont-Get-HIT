@@ -4,6 +4,10 @@
 //movement limitation
 x = clamp(x, 55, 1310);
 
+if (place_meeting(x, y, o_chosen_player1))
+{
+	global.playerCurrentHP1 -= 2;
+}
 
 if (global.mychar == 20) 
 {
@@ -24,9 +28,13 @@ if (global.mychar == 20)
 
 	 if (keyboard_check(ord("L"))) 
 		{
-		if (!place_meeting(x-1, y, o_chosen_player1))
+		if (!place_meeting(x, y, o_chosen_player1))
 		{
 			x+=5;
+		}
+		else 
+		{
+			x-=1;
 		}
 
 			sprite_index = s_character1_walk;

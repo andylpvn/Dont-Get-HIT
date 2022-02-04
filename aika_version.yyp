@@ -28,6 +28,7 @@
     {"id":{"name":"o_DefaultBG","path":"objects/o_DefaultBG/o_DefaultBG.yy",},"order":9,},
     {"id":{"name":"r_options_chooseCharacter_Green2","path":"rooms/r_options_chooseCharacter_Green2/r_options_chooseCharacter_Green2.yy",},"order":0,},
     {"id":{"name":"r_options_chooseCharacter_Steph2","path":"rooms/r_options_chooseCharacter_Steph2/r_options_chooseCharacter_Steph2.yy",},"order":4,},
+    {"id":{"name":"s_defaultBall","path":"sprites/s_defaultBall/s_defaultBall.yy",},"order":33,},
     {"id":{"name":"s_character5_idle","path":"sprites/s_character5_idle/s_character5_idle.yy",},"order":0,},
     {"id":{"name":"s_character2_idle_picture","path":"sprites/s_character2_idle_picture/s_character2_idle_picture.yy",},"order":1,},
     {"id":{"name":"r_options_chooseCharacter_Red2","path":"rooms/r_options_chooseCharacter_Red2/r_options_chooseCharacter_Red2.yy",},"order":1,},
