@@ -1,12 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Oscillate the cursor using sin function
-cursorLevitate = dsin(cursorTime);
 
-// Use this as an "angle" to use in the sin function
-// to oscillate cursor
-cursorTime += leviRate;
 
 
 // Vertical input is determined by the press of up

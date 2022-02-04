@@ -10,6 +10,10 @@ menu[2] = "Return to Main Menu";
 menu[3] = "Quit Game";
     
 
+
+
+    
+ 
 // cursorLevitate will be used to keep a variable that
 // oscillates and moves the cursor back and forth
 cursorLevitate = 0;
@@ -48,8 +52,9 @@ titleCol = c_white;
 gameTitle = "Paused";
 
 // Size of the title 
-titleSize = 3;
-fontSize = 2;
+p_titleSize = 3;
+
+p_fontSize = 2;
 // Button to move up the menu
 upButt = vk_up;
 

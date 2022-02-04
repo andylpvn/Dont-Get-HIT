@@ -1,26 +1,78 @@
-/// @description Insert description here
-// You can write your code in this editor
-//---movement
-if (keyboard_check(ord("D"))) 
-{
-	x+=10;
-}
-
-if (keyboard_check(ord("A"))) 
-{
-	x-=10;
-}
+/*PLAYER 1*/
 
 
 
+//movement limitation
+x = clamp(x, 50, 1315);
+y = clamp(y, 0, 500);
 //-----player if statement
 if (global.chosenPlayer1 == 0) 
 {
-	sprite_index = s_character1_idle;
-	draw_sprite(s_character1_idle, 0, 150, 225 );
+	
+	//default position once the game starts
+	if(keyboard_check_released(vk_space))
+	{
+			sprite_index = s_character1_idle;	
+	}
+
+	//right side walk and idle 
+	if ( keyboard_check_released(ord("D")))
+	{
+		x+=0;
+			sprite_index = s_character1_idle;
+	}
+
+	 if (keyboard_check(ord("D"))) 
+		{
+
+			x+=5;
+			sprite_index = s_character1_walk;
+			
+		}
+		
+		//left side walk and idle
+	 if (keyboard_check(ord("A"))) 
+		{
+
+			x-=5;
+			sprite_index = s_character1_walk_leftside;
+	
+		}
+
+	if (keyboard_check_released(ord("A")))
+
+	{
+		x-=0;
+			sprite_index = s_character1_idle_leftside;
+
+	}	
+	
+	//crouch
+	if (keyboard_check_pressed(ord("S")))
+	{
+		
+		sprite_index = s_character1_crouch;
+
+	}
+	
+	if (keyboard_check_released(ord("S")))
+	{
+		
+		sprite_index = s_character1_idle;
+	}
+	
+
+
+	if (keyboard_check_pressed(ord("W")))
+	{ 
+		sprite_index = s_character1_crouch;
+		y-=100; 
+		gravity=1;
+	}
 
 
 }
+
 
 else if (global.chosenPlayer1 == 1) 
 {

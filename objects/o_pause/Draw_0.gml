@@ -32,7 +32,7 @@ for(i = 0; i < array_length_1d(menu); i++)
 	}
 	
 	// Draw the text
-	draw_text_transformed(room_width*0.45, (room_height*0.45) +i*spacing, menu[i], fontSize, fontSize, 0);
+	draw_text_transformed(room_width*0.35, (room_height*0.45) +i*spacing, menu[i], p_fontSize, p_fontSize, 0);
 	//draw_text(x,y+i*spacing, menu[i]);	
 }
 // Getting width of cursor to separate it a bit from the menu
@@ -40,5 +40,5 @@ for(i = 0; i < array_length_1d(menu); i++)
 
 // Draw game title (at 10% of screen width and height, hence 0.1)
 draw_set_color(titleCol);
-draw_text_transformed(room_width*0.45, room_height*0.35 , gameTitle, titleSize, titleSize,0);
+draw_text_transformed(room_width*0.45, room_height*0.35 , gameTitle, p_titleSize, p_titleSize,0);
 }

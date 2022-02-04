@@ -81,7 +81,7 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// choose map
-		room_goto(r_options_map);
+		room_goto(r_game);
 		//audio_play_sound(snd_menuConfirm, 1000,false);
 	}
 	

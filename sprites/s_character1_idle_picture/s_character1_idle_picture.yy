@@ -93,8 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "character1",
+    "path": "folders/Sprites/character1.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_character1_idle_picture",
