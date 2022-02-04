@@ -11,27 +11,36 @@ if (global.mychar == 20)
 	{
 			sprite_index = s_character1_idle_leftside;	
 	}
-
+	
 	//right side walk and idle 
 	if ( keyboard_check_released(ord("L")))
 	{
+
 		x+=0;
 			sprite_index = s_character1_idle;
+		
 	}
 
 	 if (keyboard_check(ord("L"))) 
 		{
-
+		if (!place_meeting(x-1, y, o_chosen_player1))
+		{
 			x+=5;
+		}
+
 			sprite_index = s_character1_walk;
 			
 		}
-		
+	
+	
 		//left side walk and idle
 	 if (keyboard_check(ord("J"))) 
 		{
-
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
 			x-=5;
+		}
+		
 			sprite_index = s_character1_walk_leftside;
 	
 		}
@@ -44,50 +53,436 @@ if (global.mychar == 20)
 
 	}	
 	
-	//crouch
+		//crouch	
 	if (keyboard_check_pressed(ord("K")))
 	{
-		
-		sprite_index = s_character1_crouch;
-
+		if (sprite_index = s_character1_idle_leftside)
+		{
+		sprite_index = s_character1_crouch_leftside;
+		}
+		else
+		{
+			sprite_index = s_character1_crouch;
+		}
 	}
 	
-	if (keyboard_check_released(ord("K")))
+    if (keyboard_check_released(ord("K"))) 
 	{
-		
-		sprite_index = s_character1_idle;
+		if (sprite_index = s_character1_crouch_leftside)
+		{
+		sprite_index = s_character1_idle_leftside;
+		}
+		else
+		{
+			sprite_index = s_character1_idle;
+		}		
 	}
 
 }
 
 else if (global.mychar == 21) 
 {
-	sprite_index = s_character2_idle;
-	draw_sprite(s_character2_idle, 0, 550, 225 );
+	//default position once the game starts
+	if(keyboard_check_released(vk_space))
+	{
+			sprite_index = s_character2_idle_leftside;	
+	}
+	
+	//right side walk and idle 
+	if ( keyboard_check_released(ord("L")))
+	{
+
+		x+=0;
+			sprite_index = s_character2_idle;
+		
+	}
+
+	 if (keyboard_check(ord("L"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x+=5;
+		}
+		else 
+		{
+			x-=1;
+		}
+			sprite_index = s_character2_walk;
+			
+		}
+	
+	
+		//left side walk and idle
+	 if (keyboard_check(ord("J"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x-=5;
+		}
+		else 
+		{
+			x+=1;
+		}
+			sprite_index = s_character2_walk_leftside;
+	
+		}
+
+	if (keyboard_check_released(ord("J")))
+
+	{
+		x-=0;
+			sprite_index = s_character2_idle_leftside;
+
+	}	
+	
+		//crouch	
+	if (keyboard_check_pressed(ord("K")))
+	{
+		if (sprite_index = s_character2_idle_leftside)
+		{
+		sprite_index = s_character2_crouch_leftside;
+		}
+		else
+		{
+			sprite_index = s_character2_crouch;
+		}
+	}
+	
+    if (keyboard_check_released(ord("K"))) 
+	{
+		if (sprite_index = s_character2_crouch_leftside)
+		{
+		sprite_index = s_character2_idle_leftside;
+		}
+		else
+		{
+			sprite_index = s_character2_idle;
+		}		
+	}
 }
 
 else if (global.mychar == 22)
 {
-	sprite_index = s_character3_idle;
-	draw_sprite(s_character3_idle, 0, 550, 225 );
+	//default position once the game starts
+	if(keyboard_check_released(vk_space))
+	{
+			sprite_index = s_character3_idle_leftside;	
+	}
+	
+	//right side walk and idle 
+	if ( keyboard_check_released(ord("L")))
+	{
+
+		x+=0;
+			sprite_index = s_character3_idle;
+		
+	}
+
+	 if (keyboard_check(ord("L"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x+=5;
+		}
+		else 
+		{
+			x-=1;
+		}
+			sprite_index = s_character3_walk;
+			
+		}
+	
+	
+		//left side walk and idle
+	 if (keyboard_check(ord("J"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x-=5;
+		}
+		else 
+		{
+			x+=1;
+		}
+			sprite_index = s_character3_walk_leftside;
+	
+		}
+
+	if (keyboard_check_released(ord("J")))
+
+	{
+		x-=0;
+			sprite_index = s_character3_idle_leftside;
+
+	}	
+	
+		//crouch	
+	if (keyboard_check_pressed(ord("K")))
+	{
+		if (sprite_index = s_character3_idle_leftside)
+		{
+		sprite_index = s_character3_crouch_leftside;
+		}
+		else
+		{
+			sprite_index = s_character3_crouch;
+		}
+	}
+	
+    if (keyboard_check_released(ord("K"))) 
+	{
+		if (sprite_index = s_character3_crouch_leftside)
+		{
+		sprite_index = s_character3_idle_leftside;
+		}
+		else
+		{
+			sprite_index = s_character3_idle;
+		}		
+	}
 }
 
 
 else if (global.mychar == 23)
 {
-	sprite_index = s_character4_idle;
-	draw_sprite(s_character4_idle, 0, 550, 225 );
+	//default position once the game starts
+	if(keyboard_check_released(vk_space))
+	{
+			sprite_index = s_character4_idle_leftside;	
+	}
+	
+	//right side walk and idle 
+	if ( keyboard_check_released(ord("L")))
+	{
+
+		x+=0;
+			sprite_index = s_character4_idle;
+		
+	}
+
+	 if (keyboard_check(ord("L"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x+=5;
+		}
+		else 
+		{
+			x-=1;
+		}
+			sprite_index = s_character4_walk;
+			
+		}
+	
+	
+		//left side walk and idle
+	 if (keyboard_check(ord("J"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x-=5;
+		}
+		else 
+		{
+			x+=1;
+		}
+			sprite_index = s_character4_walk_leftside;
+	
+		}
+
+	if (keyboard_check_released(ord("J")))
+
+	{
+		x-=0;
+			sprite_index = s_character4_idle_leftside;
+
+	}	
+	
+		//crouch	
+	if (keyboard_check_pressed(ord("K")))
+	{
+		if (sprite_index = s_character4_idle_leftside)
+		{
+		sprite_index = s_character4_crouch_leftside;
+		}
+		else
+		{
+			sprite_index = s_character4_crouch;
+		}
+	}
+	
+    if (keyboard_check_released(ord("K"))) 
+	{
+		if (sprite_index = s_character4_crouch_leftside)
+		{
+		sprite_index = s_character4_idle_leftside;
+		}
+		else
+		{
+			sprite_index = s_character4_idle;
+		}		
+	}
 }
 
 
 else if (global.mychar == 24)
 {
-	sprite_index = s_character5_idle;
-	draw_sprite(s_character5_idle, 0, 550, 225 );
+	//default position once the game starts
+	if(keyboard_check_released(vk_space))
+	{
+			sprite_index = s_character5_idle_leftside;	
+	}
+	
+	//right side walk and idle 
+	if ( keyboard_check_released(ord("L")))
+	{
+
+		x+=0;
+			sprite_index = s_character5_idle;
+		
+	}
+
+	 if (keyboard_check(ord("L"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x+=5;
+		}
+		else 
+		{
+			x-=1;
+		}
+			sprite_index = s_character5_walk;
+			
+		}
+	
+	
+		//left side walk and idle
+	 if (keyboard_check(ord("J"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x-=5;
+		}
+		else 
+		{
+			x+=1;
+		}
+			sprite_index = s_character5_walk_leftside;
+	
+		}
+
+	if (keyboard_check_released(ord("J")))
+
+	{
+		x-=0;
+			sprite_index = s_character5_idle_leftside;
+
+	}	
+	
+		//crouch	
+	if (keyboard_check_pressed(ord("K")))
+	{
+		if (sprite_index = s_character5_idle_leftside)
+		{
+		sprite_index = s_character5_crouch_leftside;
+		}
+		else
+		{
+			sprite_index = s_character5_crouch;
+		}
+	}
+	
+    if (keyboard_check_released(ord("K"))) 
+	{
+		if (sprite_index = s_character5_crouch_leftside)
+		{
+		sprite_index = s_character5_idle_leftside;
+		}
+		else
+		{
+			sprite_index = s_character5_idle;
+		}		
+	}
 }
 
 else if (global.mychar == 25)
 {
-	sprite_index = s_character6_idle;	
-	draw_sprite(s_character6_idle, 0, 550, 225 );
+	//default position once the game starts
+	if(keyboard_check_released(vk_space))
+	{
+			sprite_index = s_character6_idle_leftside;	
+	}
+	
+	//right side walk and idle 
+	if ( keyboard_check_released(ord("L")))
+	{
+
+		x+=0;
+			sprite_index = s_character6_idle;
+		
+	}
+
+	 if (keyboard_check(ord("L"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x+=5;
+		}
+		else 
+		{
+			x-=1;
+		}
+			sprite_index = s_character6_walk;
+			
+		}
+	
+	
+		//left side walk and idle
+	 if (keyboard_check(ord("J"))) 
+		{
+		if (!place_meeting(x, y, o_chosen_player1))
+		{
+			x-=5;
+		}
+		else 
+		{
+			x+=1;	
+		}
+			sprite_index = s_character6_walk_leftside;
+	
+		}
+
+	if (keyboard_check_released(ord("J")))
+
+	{
+		x-=0;
+			sprite_index = s_character6_idle_leftside;
+
+	}	
+	
+		//crouch	
+	if (keyboard_check_pressed(ord("K")))
+	{
+		if (sprite_index = s_character6_idle_leftside)
+		{
+		sprite_index = s_character6_crouch_leftside;
+		}
+		else
+		{
+			sprite_index = s_character6_crouch;
+		}
+	}
+	
+    if (keyboard_check_released(ord("K"))) 
+	{
+		if (sprite_index = s_character6_crouch_leftside)
+		{
+		sprite_index = s_character6_idle_leftside;
+		}
+		else
+		{
+			sprite_index = s_character6_idle;
+		}		
+	}
 }

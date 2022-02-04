@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "character4",
+    "path": "folders/Sprites/character4.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_character4_idle_picture",
