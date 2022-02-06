@@ -1,4 +1,6 @@
 //create menu sound
+audio_play_sound(snd_menuBackground,100, true);
+
 //audio_play_sound(snd_menuBackground, 1000, true);
 
  

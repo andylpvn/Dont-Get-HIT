@@ -2,8 +2,8 @@
 //audio_play_sound(snd_menuBackground, 1000, true);
 
  
-// This is the word to be drawn
-controlsTitle[0] = "Controls";
+// Menu element names. This will be what is actually drawn
+menu[0] = "Controls";
 
 // Color of the menu element when selected
 selectedCol = c_gray;
