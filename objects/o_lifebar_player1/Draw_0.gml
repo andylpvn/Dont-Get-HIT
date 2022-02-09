@@ -8,6 +8,6 @@ draw_healthbar(x+40, y+30, 450, y, (global.playerCurrentHP1/ playerMaxHP1)* 100,
 
 if (global.playerCurrentHP1 == 0) 
 {
-	show_message("Player2 win!");
+
 	
 }

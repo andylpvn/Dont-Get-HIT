@@ -3,3 +3,5 @@
 
 global.playerCurrentHP1 = 100;
 playerMaxHP1 = 100;
+
+//for validation
