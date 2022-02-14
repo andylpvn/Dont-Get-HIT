@@ -3,12 +3,13 @@
 
  
 // Menu element names. This will be what is actually drawn
-menu[0] = "Controls";
+text = "-press any key to return-";
 
 // Color of the menu element when selected
-selectedCol = c_gray;
+Col = c_white;
 
-// Color of the menu element when not selected
-notSelectedCol = c_black;
+//anykey button
+anyKey = vk_anykey;
+
 
 
