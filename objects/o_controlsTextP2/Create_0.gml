@@ -1,5 +1,5 @@
 //CREATE COLORS
-controlsColP2 = make_color_rgb(80, 101, 217); // blue P2
+controlsColP2 = make_color_rgb(28, 28, 28); //black
 
 //CREATE TEXT
-text="Player 2\nMove - JIKL    Pickup/Throw - O\nCrouch - U    Jump - H"; // controls P1
+text="Player 2\nMove - JL\nPickup - O\nThrow - O\nCrouch - K\nJump - H"; // controls P1
