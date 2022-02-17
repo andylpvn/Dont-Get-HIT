@@ -12,7 +12,7 @@ else
 }
 displayedTime = ceil(global_time);
 
-if (global_time == 0) 
+if (global_time <= 0) 
 {
 
 // Vertical input is determined by the press of up

@@ -3,10 +3,11 @@
 if (!pause) 
 {
 	pause = true;
-	instance_deactivate_all(true);
+	instance_deactivate_all(pause);
 }
 else 
 {
-	pause = false;
+
 	instance_activate_all();
+	pause = false;
 }

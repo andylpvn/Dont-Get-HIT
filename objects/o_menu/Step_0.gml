@@ -46,7 +46,7 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// Go to HowToPlay room
-		//audio_play_sound(snd_menuConfirm, 1000,false);
+		room_goto(r_controls);
 	}
 	
 	if(selected == 3) // Exit by default

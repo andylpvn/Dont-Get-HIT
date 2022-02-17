@@ -12,7 +12,7 @@ timerTextSize = 4.5;
 // Menu element names. This will be what is actually drawn
 menu[0] = "Play Again";
 menu[1] = "Return to Main Menu";     
-menu[1] = "Quit Game";
+menu[2] = "Quit Game";
     
 
 

@@ -47,7 +47,7 @@
     "spriteId": {"name":"s_character3_walk_leftside","path":"sprites/s_character3_walk_leftside/s_character3_walk_leftside.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 7.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

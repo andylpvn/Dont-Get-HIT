@@ -8,8 +8,10 @@ menu[0] = "How to play";
 menu[1] = "Options";
 menu[2] = "Return to Main Menu";     
 menu[3] = "Quit Game";
-    
-
+   
+menu2[0] = "Play Again";
+menu2[1] = "Return to Main Menu";     
+menu2[2] = "Quit Game";
 
 
     
@@ -39,10 +41,18 @@ spacing =26;
 
 
 // Color of the menu element when selected
-selectedCol = c_gray;
+selectedCol = c_grey;
 
 // Color of the menu element when not selected
 notSelectedCol = c_black;
+//-----
+// Holds what menu element is selected. Ex: if selected = 1, 
+// then the selected element is Options.
+selected2 = 0;
+selectLerp2 = 0; // Same as previous line but for lerp (smooth movement)
+lerpAmt2 = 0.2; // Higher number -> faster cursor (between 0 and 1)
+
+
 
 // Game title color
 titleCol = c_white;

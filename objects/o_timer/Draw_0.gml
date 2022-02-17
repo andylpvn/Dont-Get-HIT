@@ -26,6 +26,40 @@ else
 //Make an imageText for "TIMER"
 
 if (global_time == 0) {
+	if (global.playerCurrentHP1 > global.playerCurrentHP2)
+	{
+		gameTitle = "PLAYER 1 WIN!"
+		
+		instance_deactivate_object(o_chosen_player1);
+	instance_deactivate_object(o_chosen_player2);
+instance_deactivate_object(o_ball);
+	instance_deactivate_object(o_lifebar_player1);
+	instance_deactivate_object(o_lifebar_player2);
+
+	}
+	else if (global.playerCurrentHP1 < global.playerCurrentHP2) 
+	{
+		gameTitle = "PLAYER 2 WIN!"
+	
+		instance_deactivate_object(o_chosen_player1);
+	instance_deactivate_object(o_chosen_player2);
+instance_deactivate_object(o_ball);
+	instance_deactivate_object(o_lifebar_player1);
+	instance_deactivate_object(o_lifebar_player2);
+
+	}
+	else 
+	{
+		gameTitle = "DRAW!"
+
+		instance_deactivate_object(o_chosen_player1);
+	instance_deactivate_object(o_chosen_player2);
+instance_deactivate_object(o_ball);
+	instance_deactivate_object(o_lifebar_player1);
+	instance_deactivate_object(o_lifebar_player2);
+
+	}
+
 //END
 /// @description Insert description here
 // You can write your code in this editor
@@ -60,7 +94,7 @@ for(i = 0; i < array_length_1d(menu); i++)
 	}
 	
 	// Draw the text
-	draw_text_transformed(room_width*0.35, (room_height*0.45) +i*spacing, menu[i], p_fontSize, p_fontSize, 0);
+	draw_text_transformed(room_width*0.35, (room_height*0.35) +i*spacing, menu[i], p_fontSize, p_fontSize, 0);
 	//draw_text(x,y+i*spacing, menu[i]);	
 }
 // Getting width of cursor to separate it a bit from the menu
@@ -68,6 +102,6 @@ for(i = 0; i < array_length_1d(menu); i++)
 
 // Draw game title (at 10% of screen width and height, hence 0.1)
 draw_set_color(titleCol);
-draw_text_transformed(room_width*0.45, room_height*0.35 , gameTitle, p_titleSize, p_titleSize,0);
+draw_text_transformed(room_width*0.35, room_height*0.25 , gameTitle, p_titleSize, p_titleSize,0);
 
 }

@@ -2,499 +2,910 @@
 // You can write your code in this editor
 
 //movement limitation
-x = clamp(x, 55, 1310);
+x = clamp(x, 750, 1310);
 
-if (place_meeting(x, y, o_chosen_player1))
+y = clamp(y, 500, 700);
+
+
+if (global.mychar == 20) //done in pickup and holding left and right
 {
-	global.playerCurrentHP1 -= 2;
-}
+	player2_controlKeys_character1();
+		 #region temp vars
 
-if (global.mychar == 20) 
+var didSomething2 = false;
+
+#endregion
+#region check if can throw holding
+depth = -y;
+if (holdingState2 == "holding2" && !didSomething2)
 {
-	//default position once the game starts
-	if(keyboard_check_released(vk_space))
+	if (keyboard_check_pressed(ord("O")))
 	{
-			sprite_index = s_character1_idle_leftside;	
-	}
-	
-	//right side walk and idle 
-	if ( keyboard_check_released(ord("L")))
-	{
-
-		x+=0;
-			sprite_index = s_character1_idle;
-		
-	}
-
-	 if (keyboard_check(ord("L"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x+=5;
-		}
-		else 
-		{
-			x-=1;
-		}
-
-			sprite_index = s_character1_walk;
-			
-		}
-	
-	
-		//left side walk and idle
-	 if (keyboard_check(ord("J"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x-=5;
-		}
-		else 
-		{
-			x-=1;
-		}
-			sprite_index = s_character1_walk_leftside;
-	
-		}
-
-	if (keyboard_check_released(ord("J")))
-
-	{
-		x-=0;
-			sprite_index = s_character1_idle_leftside;
-
-	}	
-	
-		//crouch	
-	if (keyboard_check_pressed(ord("K")))
-	{
-		if (sprite_index = s_character1_idle_leftside)
-		{
-		sprite_index = s_character1_crouch_leftside;
-		}
-		else
-		{
-			sprite_index = s_character1_crouch;
-		}
-	}
-	
-    if (keyboard_check_released(ord("K"))) 
-	{
-		if (sprite_index = s_character1_crouch_leftside)
-		{
-		sprite_index = s_character1_idle_leftside;
-		}
-		else
-		{
-			sprite_index = s_character1_idle;
-		}		
-	}
-
-}
-
-else if (global.mychar == 21) 
-{
-	//default position once the game starts
-	if(keyboard_check_released(vk_space))
-	{
-			sprite_index = s_character2_idle_leftside;	
-	}
-	
-	//right side walk and idle 
-	if ( keyboard_check_released(ord("L")))
-	{
-
-		x+=0;
-			sprite_index = s_character2_idle;
-		
-	}
-
-	 if (keyboard_check(ord("L"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x+=5;
-		}
-		else 
-		{
-			x-=1;
-		}
-			sprite_index = s_character2_walk;
-			
-		}
-	
-	
-		//left side walk and idle
-	 if (keyboard_check(ord("J"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x-=5;
-		}
-		else 
-		{
-			x+=1;
-		}
-			sprite_index = s_character2_walk_leftside;
-	
-		}
-
-	if (keyboard_check_released(ord("J")))
-
-	{
-		x-=0;
-			sprite_index = s_character2_idle_leftside;
-
-	}	
-	
-		//crouch	
-	if (keyboard_check_pressed(ord("K")))
-	{
-		if (sprite_index = s_character2_idle_leftside)
-		{
-		sprite_index = s_character2_crouch_leftside;
-		}
-		else
-		{
-			sprite_index = s_character2_crouch;
-		}
-	}
-	
-    if (keyboard_check_released(ord("K"))) 
-	{
-		if (sprite_index = s_character2_crouch_leftside)
-		{
-		sprite_index = s_character2_idle_leftside;
-		}
-		else
-		{
-			sprite_index = s_character2_idle;
-		}		
+		didSomething2 = true;
+		global.picked2+=1;
+		image_index = sprite_get_number(s_character1_walk) - 1;
+		image_speed = CHARACTER_FPS2;
+		throw_holdable2(true);
 	}
 }
 
-else if (global.mychar == 22)
+#endregion
+#region check if can pick up pickable
+
+var pickedInstance2 = can_interact_with_object2(o_ball2, !didSomething2, true, spr_link_mask_big2);
+if (pickedInstance2 != noone)
 {
-	//default position once the game starts
-	if(keyboard_check_released(vk_space))
+	if (pickup_pickable2(keyboard_check_pressed(ord("O")), pickedInstance2))
 	{
-			sprite_index = s_character3_idle_leftside;	
-	}
-	
-	//right side walk and idle 
-	if ( keyboard_check_released(ord("L")))
-	{
-
-		x+=0;
-			sprite_index = s_character3_idle;
-		
-	}
-
-	 if (keyboard_check(ord("L"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x+=5;
-		}
-		else 
-		{
-			x-=1;
-		}
-			sprite_index = s_character3_walk;
-			
-		}
-	
-	
-		//left side walk and idle
-	 if (keyboard_check(ord("J"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x-=5;
-		}
-		else 
-		{
-			x+=1;
-		}
-			sprite_index = s_character3_walk_leftside;
-	
-		}
-
-	if (keyboard_check_released(ord("J")))
-
-	{
-		x-=0;
-			sprite_index = s_character3_idle_leftside;
-
-	}	
-	
-		//crouch	
-	if (keyboard_check_pressed(ord("K")))
-	{
-		if (sprite_index = s_character3_idle_leftside)
-		{
-		sprite_index = s_character3_crouch_leftside;
-		}
-		else
-		{
-			sprite_index = s_character3_crouch;
-		}
-	}
-	
-    if (keyboard_check_released(ord("K"))) 
-	{
-		if (sprite_index = s_character3_crouch_leftside)
-		{
-		sprite_index = s_character3_idle_leftside;
-		}
-		else
-		{
-			sprite_index = s_character3_idle;
-		}		
+		didSomething2 = true;
+		global.picked2+=1;
+		image_index = 0;
+		image_speed = CHARACTER_FPS2;
 	}
 }
 
+#endregion
+#region speed setting
 
-else if (global.mychar == 23)
+var hNoPress2 = 0;
+var vNoPress2 = 0;
+
+if (keyboard_check(ord("J")))
 {
-	//default position once the game starts
-	if(keyboard_check_released(vk_space))
+	hspeed -= ACCELERATION2;
+	hspeed = max(hspeed, -MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("L")))
+{
+	hspeed += ACCELERATION2;
+	hspeed = min(hspeed, MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("I")))
+{
+	vspeed -= ACCELERATION2;
+	vspeed = max(vspeed, -MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (keyboard_check(ord("K")))
+{
+	vspeed += ACCELERATION2;
+	vspeed = min(vspeed, MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (hNoPress2 == 2)
+{
+	h_deceleration_time2 ++;
+	hspeed = ease_linear2(h_deceleration_time2, hspeed_start2, 0, 5);
+	
+}
+if (vNoPress2 == 2)
+{
+	v_deceleration_time2 ++;
+	vspeed = ease_linear2(v_deceleration_time2, vspeed_start2, 0, 5);
+}
+
+//force speed reset on picking or throwing
+if (holdingState2 == "picking2" || holdingState2 == "throwing2")
+{
+	hspeed = 0;
+	vspeed = 0;
+	h_deceleration_time2 = 0;
+	v_deceleration_time2 = 0;
+	hspeed_start2 = 0;
+	vspeed_start2 = 0;
+}
+
+#endregion
+#region animation
+
+depth = -y;
+
+if (holdingState2 == "holding2" || holdingState2 == false)
+{
+	if (speed == 0)
 	{
-			sprite_index = s_character4_idle_leftside;	
+		image_speed = 0;
 	}
-	
-	//right side walk and idle 
-	if ( keyboard_check_released(ord("L")))
+	else
 	{
-
-		x+=0;
-			sprite_index = s_character4_idle;
-		
-	}
-
-	 if (keyboard_check(ord("L"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x+=5;
-		}
-		else 
-		{
-			x-=1;
-		}
-			sprite_index = s_character4_walk;
-			
-		}
-	
-	
-		//left side walk and idle
-	 if (keyboard_check(ord("J"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x-=5;
-		}
-		else 
-		{
-			x+=1;
-		}
-			sprite_index = s_character4_walk_leftside;
-	
-		}
-
-	if (keyboard_check_released(ord("J")))
-
-	{
-		x-=0;
-			sprite_index = s_character4_idle_leftside;
-
-	}	
-	
-		//crouch	
-	if (keyboard_check_pressed(ord("K")))
-	{
-		if (sprite_index = s_character4_idle_leftside)
-		{
-		sprite_index = s_character4_crouch_leftside;
-		}
-		else
-		{
-			sprite_index = s_character4_crouch;
-		}
-	}
-	
-    if (keyboard_check_released(ord("K"))) 
-	{
-		if (sprite_index = s_character4_crouch_leftside)
-		{
-		sprite_index = s_character4_idle_leftside;
-		}
-		else
-		{
-			sprite_index = s_character4_idle;
-		}		
+		animation_direction2 = compass_direction2(direction);
+		image_speed = CHARACTER_FPS2;
 	}
 }
 
-
-else if (global.mychar == 24)
+if (holdingState2 == "picking2")
 {
-	//default position once the game starts
-	if(keyboard_check_released(vk_space))
-	{
-			sprite_index = s_character5_idle_leftside;	
-	}
+	 sprite_index_based_on_compass_direction2(animation_direction2, s_character1_crouch, s_character1_crouch, s_character1_crouch_leftside, s_character1_crouch_leftside);
+}
+else if (holdingState2 == "holding2")
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character1_holding, s_character1_holding, s_character1_holding_left, s_character1_holding_left);
 	
-	//right side walk and idle 
-	if ( keyboard_check_released(ord("L")))
-	{
+}
+else
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character1_walk, s_character1_walk, s_character1_walk_leftside, s_character1_walk_leftside);
+}
 
-		x+=0;
-			sprite_index = s_character5_idle;
+#endregion
+
+
+
+}
+
+else if (global.mychar == 21) //done in pickup and holding left and right
+{
+	player2_controlKeys_character2();
+		 #region temp vars
+
+var didSomething2 = false;
+
+#endregion
+#region check if can throw holding
+depth = -y;
+if (holdingState2 == "holding2" && !didSomething2)
+{
+	if (keyboard_check_pressed(ord("O")))
+	{
+		didSomething2 = true;
 		
+		image_index = sprite_get_number(s_character2_walk) - 1;
+		image_speed = CHARACTER_FPS2;
+		throw_holdable2(true);
 	}
+}
 
-	 if (keyboard_check(ord("L"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x+=5;
-		}
-		else 
-		{
-			x-=1;
-		}
-			sprite_index = s_character5_walk;
-			
-		}
-	
-	
-		//left side walk and idle
-	 if (keyboard_check(ord("J"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x-=5;
-		}
-		else 
-		{
-			x+=1;
-		}
-			sprite_index = s_character5_walk_leftside;
-	
-		}
+#endregion
+#region check if can pick up pickable
 
-	if (keyboard_check_released(ord("J")))
-
+var pickedInstance2 = can_interact_with_object2(o_ball2, !didSomething2, true, spr_link_mask_big2);
+if (pickedInstance2 != noone)
+{
+	if (pickup_pickable2(keyboard_check_pressed(ord("O")), pickedInstance2))
 	{
-		x-=0;
-			sprite_index = s_character5_idle_leftside;
-
-	}	
+		didSomething2 = true;
 	
-		//crouch	
-	if (keyboard_check_pressed(ord("K")))
-	{
-		if (sprite_index = s_character5_idle_leftside)
-		{
-		sprite_index = s_character5_crouch_leftside;
-		}
-		else
-		{
-			sprite_index = s_character5_crouch;
-		}
+		image_index = 0;
+		image_speed = CHARACTER_FPS2;
 	}
+}
+
+#endregion
+#region speed setting
+
+var hNoPress2 = 0;
+var vNoPress2 = 0;
+
+if (keyboard_check(ord("J")))
+{
+	hspeed -= ACCELERATION2;
+	hspeed = max(hspeed, -MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("L")))
+{
+	hspeed += ACCELERATION2;
+	hspeed = min(hspeed, MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("I")))
+{
+	vspeed -= ACCELERATION2;
+	vspeed = max(vspeed, -MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (keyboard_check(ord("K")))
+{
+	vspeed += ACCELERATION2;
+	vspeed = min(vspeed, MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (hNoPress2 == 2)
+{
+	h_deceleration_time2 ++;
+	hspeed = ease_linear2(h_deceleration_time2, hspeed_start2, 0, 7);
 	
-    if (keyboard_check_released(ord("K"))) 
+}
+if (vNoPress2 == 2)
+{
+	v_deceleration_time2 ++;
+	vspeed = ease_linear2(v_deceleration_time2, vspeed_start2, 0, 7);
+}
+
+//force speed reset on picking or throwing
+if (holdingState2 == "picking2" || holdingState2 == "throwing2")
+{
+	hspeed = 0;
+	vspeed = 0;
+	h_deceleration_time2 = 0;
+	v_deceleration_time2 = 0;
+	hspeed_start2 = 0;
+	vspeed_start2 = 0;
+}
+
+#endregion
+#region animation
+
+depth = -y;
+
+if (holdingState2 == "holding2" || holdingState2 == false)
+{
+	if (speed == 0)
 	{
-		if (sprite_index = s_character5_crouch_leftside)
-		{
-		sprite_index = s_character5_idle_leftside;
-		}
-		else
-		{
-			sprite_index = s_character5_idle;
-		}		
+		image_speed = 0;
 	}
+	else
+	{
+		animation_direction2 = compass_direction2(direction);
+		image_speed = CHARACTER_FPS2;
+	}
+}
+
+if (holdingState2 == "picking2")
+{
+	 sprite_index_based_on_compass_direction2(animation_direction2, s_character2_pickup, s_character2_pickup, s_character2_pickup_left, s_character2_pickup_left);
+}
+else if (holdingState2 == "holding2")
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character2_holding_left, s_character2_holding_left, s_character2_holding, s_character2_holding);
+}
+else
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character2_walk, s_character2_walk, s_character2_walk_leftside, s_character2_walk_leftside);
+}
+
+#endregion
+
+
+
+}
+
+else if (global.mychar == 22)//done in pickup and holding left and right
+{
+	player2_controlKeys_character3();
+		 #region temp vars
+
+var didSomething2 = false;
+
+#endregion
+#region check if can throw holding
+depth = -y;
+if (holdingState2 == "holding2" && !didSomething2)
+{
+	if (keyboard_check_pressed(ord("O")))
+	{
+		didSomething2 = true;
+		
+		image_index = sprite_get_number(s_character3_walk) - 1;
+		image_speed = CHARACTER_FPS2;
+		throw_holdable2(true);
+	}
+}
+
+#endregion
+#region check if can pick up pickable
+
+var pickedInstance2 = can_interact_with_object2(o_ball2, !didSomething2, true, spr_link_mask_big2);
+if (pickedInstance2 != noone)
+{
+	if (pickup_pickable2(keyboard_check_pressed(ord("O")), pickedInstance2))
+	{
+		didSomething2 = true;
+		
+		image_index = 0;
+		image_speed = CHARACTER_FPS2;
+	}
+}
+
+#endregion
+#region speed setting
+
+var hNoPress2 = 0;
+var vNoPress2 = 0;
+
+if (keyboard_check(ord("J")))
+{
+	hspeed -= ACCELERATION2;
+	hspeed = max(hspeed, -MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("L")))
+{
+	hspeed += ACCELERATION2;
+	hspeed = min(hspeed, MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("I")))
+{
+	vspeed -= ACCELERATION2;
+	vspeed = max(vspeed, -MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (keyboard_check(ord("K")))
+{
+	vspeed += ACCELERATION2;
+	vspeed = min(vspeed, MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (hNoPress2 == 2)
+{
+	h_deceleration_time2 ++;
+	hspeed = ease_linear2(h_deceleration_time2, hspeed_start2, 0, 5);
+	
+}
+if (vNoPress2 == 2)
+{
+	v_deceleration_time2 ++;
+	vspeed = ease_linear2(v_deceleration_time2, vspeed_start2, 0, 5);
+}
+
+//force speed reset on picking or throwing
+if (holdingState2 == "picking2" || holdingState2 == "throwing2")
+{
+	hspeed = 0;
+	vspeed = 0;
+	h_deceleration_time2 = 0;
+	v_deceleration_time2 = 0;
+	hspeed_start2 = 0;
+	vspeed_start2 = 0;
+}
+
+#endregion
+#region animation
+
+depth = -y;
+
+if (holdingState2 == "holding2" || holdingState2 == false)
+{
+	if (speed == 0)
+	{
+		image_speed = 0;
+	}
+	else
+	{
+		animation_direction2 = compass_direction2(direction);
+		image_speed = CHARACTER_FPS2;
+	}
+}
+
+if (holdingState2 == "picking2")
+{
+	 sprite_index_based_on_compass_direction2(animation_direction2, s_character3_crouch, s_character3_crouch, s_character3_crouch_leftside, s_character3_crouch_leftside);
+}
+else if (holdingState2 == "holding2")
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character3_holding_left, s_character3_holding_left, s_character3_holding, s_character3_holding);
+	
+}
+else
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character3_walk, s_character3_walk, s_character3_walk_leftside, s_character3_walk_leftside);
+}
+
+#endregion
+
+
+}
+
+else if (global.mychar == 23)//done in pickup and holding left and right
+{
+	player2_controlKeys_character4();
+		 #region temp vars
+
+var didSomething2 = false;
+
+#endregion
+#region check if can throw holding
+depth = -y;
+if (holdingState2 == "holding2" && !didSomething2)
+{
+	if (keyboard_check_pressed(ord("O")))
+	{
+		didSomething2 = true;
+		global.picked2+=1;
+		image_index = sprite_get_number(s_character4_walk) - 1;
+		image_speed = CHARACTER_FPS2;
+		throw_holdable2(true);
+	}
+}
+
+#endregion
+#region check if can pick up pickable
+
+var pickedInstance2 = can_interact_with_object2(o_ball2, !didSomething2, true, spr_link_mask_big2);
+if (pickedInstance2 != noone)
+{
+	if (pickup_pickable2(keyboard_check_pressed(ord("O")), pickedInstance2))
+	{
+		didSomething2 = true;
+		global.picked2+=1;
+		image_index = 0;
+		image_speed = CHARACTER_FPS2;
+	}
+}
+
+#endregion
+#region speed setting
+
+var hNoPress2 = 0;
+var vNoPress2 = 0;
+
+if (keyboard_check(ord("J")))
+{
+	hspeed -= ACCELERATION2;
+	hspeed = max(hspeed, -MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("L")))
+{
+	hspeed += ACCELERATION2;
+	hspeed = min(hspeed, MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("I")))
+{
+	vspeed -= ACCELERATION2;
+	vspeed = max(vspeed, -MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (keyboard_check(ord("K")))
+{
+	vspeed += ACCELERATION2;
+	vspeed = min(vspeed, MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (hNoPress2 == 2)
+{
+	h_deceleration_time2 ++;
+	hspeed = ease_linear2(h_deceleration_time2, hspeed_start2, 0, 5);
+	
+}
+if (vNoPress2 == 2)
+{
+	v_deceleration_time2 ++;
+	vspeed = ease_linear2(v_deceleration_time2, vspeed_start2, 0, 5);
+}
+
+//force speed reset on picking or throwing
+if (holdingState2 == "picking2" || holdingState2 == "throwing2")
+{
+	hspeed = 0;
+	vspeed = 0;
+	h_deceleration_time2 = 0;
+	v_deceleration_time2 = 0;
+	hspeed_start2 = 0;
+	vspeed_start2 = 0;
+}
+
+#endregion
+#region animation
+
+depth = -y;
+
+if (holdingState2 == "holding2" || holdingState2 == false)
+{
+	if (speed == 0)
+	{
+		image_speed = 0;
+	}
+	else
+	{
+		animation_direction2 = compass_direction2(direction);
+		image_speed = CHARACTER_FPS2;
+	}
+}
+
+if (holdingState2 == "picking2")
+{
+	 sprite_index_based_on_compass_direction2(animation_direction2, s_character4_idle_leftside, s_character4_idle_leftside, s_character4_idle_leftside, s_character4_crouch_leftside);
+}
+else if (holdingState2 == "holding2")
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character4_holding, s_character4_holding, s_character4_holding_left, s_character4_holding_left);
+}
+else
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character4_walk, s_character4_walk, s_character4_walk_leftside, s_character4_walk_leftside);
+}
+
+#endregion
+
+}
+
+else if (global.mychar == 24)//done in pickup and holding left and right
+{
+	player2_controlKeys_character5();
+		 #region temp vars
+
+var didSomething2 = false;
+
+#endregion
+#region check if can throw holding
+depth = -y;
+if (holdingState2 == "holding2" && !didSomething2)
+{
+	if (keyboard_check_pressed(ord("O")))
+	{
+		didSomething2 = true;
+		global.picked2+=1;
+		image_index = sprite_get_number(s_character5_walk) - 1;
+		image_speed = CHARACTER_FPS2;
+		throw_holdable2(true);
+	}
+}
+
+#endregion
+#region check if can pick up pickable
+
+var pickedInstance2 = can_interact_with_object2(o_ball2, !didSomething2, true, spr_link_mask_big2);
+if (pickedInstance2 != noone)
+{
+	if (pickup_pickable2(keyboard_check_pressed(ord("O")), pickedInstance2))
+	{
+		didSomething2 = true;
+		global.picked2+=1;
+		image_index = 0;
+		image_speed = CHARACTER_FPS2;
+	}
+}
+
+#endregion
+#region speed setting
+
+var hNoPress2 = 0;
+var vNoPress2 = 0;
+
+if (keyboard_check(ord("J")))
+{
+	hspeed -= ACCELERATION2;
+	hspeed = max(hspeed, -MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("L")))
+{
+	hspeed += ACCELERATION2;
+	hspeed = min(hspeed, MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("I")))
+{
+	vspeed -= ACCELERATION2;
+	vspeed = max(vspeed, -MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (keyboard_check(ord("K")))
+{
+	vspeed += ACCELERATION2;
+	vspeed = min(vspeed, MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (hNoPress2 == 2)
+{
+	h_deceleration_time2 ++;
+	hspeed = ease_linear2(h_deceleration_time2, hspeed_start2, 0, 5);
+	
+}
+if (vNoPress2 == 2)
+{
+	v_deceleration_time2 ++;
+	vspeed = ease_linear2(v_deceleration_time2, vspeed_start2, 0, 5);
+}
+
+//force speed reset on picking or throwing
+if (holdingState2 == "picking2" || holdingState2 == "throwing2")
+{
+	hspeed = 0;
+	vspeed = 0;
+	h_deceleration_time2 = 0;
+	v_deceleration_time2 = 0;
+	hspeed_start2 = 0;
+	vspeed_start2 = 0;
+}
+
+#endregion
+#region animation
+
+depth = -y;
+
+if (holdingState2 == "holding2" || holdingState2 == false)
+{
+	if (speed == 0)
+	{
+		image_speed = 0;
+	}
+	else
+	{
+		animation_direction2 = compass_direction2(direction);
+		image_speed = CHARACTER_FPS2;
+	}
+}
+
+if (holdingState2 == "picking2")
+{
+	 sprite_index_based_on_compass_direction2(animation_direction2, s_character5_idle_leftside, s_character5_idle_leftside, s_character5_idle_leftside, s_character5_crouch_leftside);
+}
+else if (holdingState2 == "holding2")
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character5_holding, s_character5_holding, s_character5_holding_left, s_character5_holding_left);
+}
+else
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character5_walk, s_character5_walk, s_character5_walk_leftside, s_character5_walk_leftside);
+}
+
+#endregion
+
+
 }
 
 else if (global.mychar == 25)
 {
-	//default position once the game starts
-	if(keyboard_check_released(vk_space))
-	{
-			sprite_index = s_character6_idle_leftside;	
-	}
-	
-	//right side walk and idle 
-	if ( keyboard_check_released(ord("L")))
-	{
+	player2_controlKeys_character6();
+		 #region temp vars
 
-		x+=0;
-			sprite_index = s_character6_idle;
+var didSomething2 = false;
+
+#endregion
+#region check if can throw holding
+depth = -y;
+if (holdingState2 == "holding2" && !didSomething2)
+{
+	if (keyboard_check_pressed(ord("O")))
+	{
+		global.picked2+=1;
+		didSomething2 = true;
 		
+		image_index = sprite_get_number(s_character6_walk) - 1;
+		image_speed = CHARACTER_FPS2;
+		throw_holdable2(true);
 	}
+}
 
-	 if (keyboard_check(ord("L"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x+=5;
-		}
-		else 
-		{
-			x-=1;
-		}
-			sprite_index = s_character6_walk;
-			
-		}
-	
-	
-		//left side walk and idle
-	 if (keyboard_check(ord("J"))) 
-		{
-		if (!place_meeting(x, y, o_chosen_player1))
-		{
-			x-=5;
-		}
-		else 
-		{
-			x+=1;	
-		}
-			sprite_index = s_character6_walk_leftside;
-	
-		}
+#endregion
+#region check if can pick up pickable
 
-	if (keyboard_check_released(ord("J")))
-
+var pickedInstance2 = can_interact_with_object2(o_ball2, !didSomething2, true, spr_link_mask_big2);
+if (pickedInstance2 != noone)
+{
+	if (pickup_pickable2(keyboard_check_pressed(ord("O")), pickedInstance2))
 	{
-		x-=0;
-			sprite_index = s_character6_idle_leftside;
-
-	}	
-	
-		//crouch	
-	if (keyboard_check_pressed(ord("K")))
-	{
-		if (sprite_index = s_character6_idle_leftside)
-		{
-		sprite_index = s_character6_crouch_leftside;
-		}
-		else
-		{
-			sprite_index = s_character6_crouch;
-		}
+		didSomething2 = true;
+		global.picked2+=1;
+		image_index = 0;
+		image_speed = CHARACTER_FPS2;
 	}
+}
+
+#endregion
+#region speed setting
+
+var hNoPress2 = 0;
+var vNoPress2 = 0;
+
+if (keyboard_check(ord("J")))
+{
+	hspeed -= ACCELERATION2;
+	hspeed = max(hspeed, -MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("L")))
+{
+	hspeed += ACCELERATION2;
+	hspeed = min(hspeed, MAX_SPEED2);
+	h_deceleration_time2 = 0;
+	hspeed_start2 = hspeed;
+}
+else
+{
+	hNoPress2 ++;	
+}
+
+if (keyboard_check(ord("I")))
+{
+	vspeed -= ACCELERATION2;
+	vspeed = max(vspeed, -MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (keyboard_check(ord("K")))
+{
+	vspeed += ACCELERATION2;
+	vspeed = min(vspeed, MAX_SPEED2);
+	v_deceleration_time2 = 0;
+	vspeed_start2 = vspeed;
+}
+else
+{
+	vNoPress2 ++;	
+}
+
+if (hNoPress2 == 2)
+{
+	h_deceleration_time2 ++;
+	hspeed = ease_linear2(h_deceleration_time2, hspeed_start2, 0, 5);
 	
-    if (keyboard_check_released(ord("K"))) 
+}
+if (vNoPress2 == 2)
+{
+	v_deceleration_time2 ++;
+	vspeed = ease_linear2(v_deceleration_time2, vspeed_start2, 0, 5);
+}
+
+//force speed reset on picking or throwing
+if (holdingState2 == "picking2" || holdingState2 == "throwing2")
+{
+	hspeed = 0;
+	vspeed = 0;
+	h_deceleration_time2 = 0;
+	v_deceleration_time2 = 0;
+	hspeed_start2 = 0;
+	vspeed_start2 = 0;
+}
+
+#endregion
+#region animation
+
+depth = -y;
+
+if (holdingState2 == "holding2" || holdingState2 == false)
+{
+	if (speed == 0)
 	{
-		if (sprite_index = s_character6_crouch_leftside)
-		{
-		sprite_index = s_character6_idle_leftside;
-		}
-		else
-		{
-			sprite_index = s_character6_idle;
-		}		
+		image_speed = 0;
 	}
+	else
+	{
+		animation_direction2 = compass_direction2(direction);
+		image_speed = CHARACTER_FPS2;
+	}
+}
+
+if (holdingState2 == "picking2")
+{
+	 sprite_index_based_on_compass_direction2(animation_direction2, s_character6_crouch, s_character6_crouch, s_character6_crouch_leftside, s_character6_crouch_leftside);
+}
+else if (holdingState2 == "holding2")
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character6_holding, s_character6_holding, s_character6_holding_left, s_character6_holding_left);
+}
+else
+{
+	sprite_index_based_on_compass_direction2(animation_direction2, s_character6_walk, s_character6_walk, s_character6_walk_leftside, s_character6_walk_leftside);
+}
+
+#endregion
+
 }

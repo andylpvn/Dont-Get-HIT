@@ -78,6 +78,7 @@ if(keyboard_check_pressed(confirmButt))
 	}
 	if(selected == 6) // got to map room
 	{
+		
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// choose map
 		room_goto(r_options_chooseCharacter2);

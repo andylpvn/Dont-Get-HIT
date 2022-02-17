@@ -1,0 +1,10 @@
+function macros2() {
+#macro ACCELERATION2 .25
+#macro MAX_SPEED2 5
+#macro CHARACTER_FPS2 2
+#macro DEGREES_IN_CIRCLE2 360
+#macro LIFT_HEIGHT2 200
+#macro LINK_SHADOW_OFFSET2 5
+
+
+}

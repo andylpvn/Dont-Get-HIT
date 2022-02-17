@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-playerCurrentHP2 = 100;
-playerMaxHP2 = 100;
+global.playerCurrentHP2 = 100;
+global.playerMaxHP2 = 100;
 
