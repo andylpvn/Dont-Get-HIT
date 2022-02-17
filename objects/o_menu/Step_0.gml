@@ -52,8 +52,9 @@ if(keyboard_check_pressed(confirmButt))
 	if(selected == 3) // Exit by default
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
-		// audio_play_sound(snd_menuConfirm, 1000,false);
-		game_end();
+			// audio_play_sound(snd_menuConfirm, 1000,false);
+	     // game_end();
+		room_goto(r_credits);
 	}
 			
 

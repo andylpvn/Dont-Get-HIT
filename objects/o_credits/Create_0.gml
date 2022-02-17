@@ -1,7 +1,7 @@
 
 
 
-text="-North Moose-\nPerson1 - Role1\n\nPerson2 - Role2\n\nPerson3 - Role3\n\nPerson4 - Role4\n\nPerson5 - Role5"; // ## for line breaks
+text="-North Moose-\nPhuoc Anh Le (Andy) - Project Manager\n\nJake Stack - Sound Designer/ Programmer\n\nAika Palad - Graphic designer/ Programmer\n\nAdedipe Aladesanmi - System Analyst/ Programmer\n\nTanner Olheiser - Document Editor"; // ## for line breaks
 
 //position text
 x=room_width/2; //middle of room

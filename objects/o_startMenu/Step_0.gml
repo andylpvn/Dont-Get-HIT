@@ -58,7 +58,8 @@ if(keyboard_check_pressed(confirmButt))
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// audio_play_sound(snd_menuConfirm, 1000,false);
-		game_end();
+		//game_end();
+		room_goto(r_credits);
 	}
 			
 
