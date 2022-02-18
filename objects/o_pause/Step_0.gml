@@ -65,9 +65,7 @@ if(keyboard_check_pressed(confirmButt))
 
 			//play again
 			room_goto(r_options_chooseCharacter);
-		
-	 	
-		
+			 			
 	}
 	
 	
@@ -77,7 +75,7 @@ if(keyboard_check_pressed(confirmButt))
 		room_goto(r_Menu);
 	}
 	
-	if(selected2 == 3) // Exit by default
+	if(selected2 == 2) // Exit by default
 	{
 		  audio_play_sound(snd_menuConfirm, 1000,false);
 		// audio_play_sound(snd_menuConfirm, 1000,false);
